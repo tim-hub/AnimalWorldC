@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalWorldC
 {
-    class Paper
+    class Scissors : Element
     {
     }
 }

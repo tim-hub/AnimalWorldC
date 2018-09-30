@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace AnimalWorldC
 {
-    class Scissors
+    public interface IElementalView
     {
+        void RefreshView();
     }
 }
