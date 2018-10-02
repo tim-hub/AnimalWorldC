@@ -8,5 +8,11 @@ namespace AnimalWorldC
 {
     class Paper:Element
     {
+        public string name = "Paper";
+
+        public Paper()
+        {
+
+        }
     }
 }
