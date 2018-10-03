@@ -33,42 +33,36 @@
             this.rbPaper = new System.Windows.Forms.RadioButton();
             this.rbRock = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelPaper = new System.Windows.Forms.Label();
+            this.labelRock = new System.Windows.Forms.Label();
+            this.labelScissors = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelScissors = new System.Windows.Forms.Label();
-            this.labelRock = new System.Windows.Forms.Label();
-            this.labelPaper = new System.Windows.Forms.Label();
-            this.rb1 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.rb2 = new System.Windows.Forms.RadioButton();
-            this.rb3 = new System.Windows.Forms.RadioButton();
-            this.rb4 = new System.Windows.Forms.RadioButton();
-            this.rb5 = new System.Windows.Forms.RadioButton();
-            this.rb6 = new System.Windows.Forms.RadioButton();
-            this.rb7 = new System.Windows.Forms.RadioButton();
-            this.rb8 = new System.Windows.Forms.RadioButton();
-            this.rb9 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnColor = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblColor = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listViewResults
             // 
-            this.listViewResults.Location = new System.Drawing.Point(132, 12);
+            this.listViewResults.Location = new System.Drawing.Point(12, 27);
             this.listViewResults.Name = "listViewResults";
-            this.listViewResults.Size = new System.Drawing.Size(242, 228);
+            this.listViewResults.Size = new System.Drawing.Size(362, 213);
             this.listViewResults.TabIndex = 0;
             this.listViewResults.UseCompatibleStateImageBehavior = false;
             this.listViewResults.View = System.Windows.Forms.View.Tile;
@@ -123,6 +117,33 @@
             this.panel1.Size = new System.Drawing.Size(168, 180);
             this.panel1.TabIndex = 4;
             // 
+            // labelPaper
+            // 
+            this.labelPaper.AutoSize = true;
+            this.labelPaper.Location = new System.Drawing.Point(56, 147);
+            this.labelPaper.Name = "labelPaper";
+            this.labelPaper.Size = new System.Drawing.Size(13, 13);
+            this.labelPaper.TabIndex = 9;
+            this.labelPaper.Text = "3";
+            // 
+            // labelRock
+            // 
+            this.labelRock.AutoSize = true;
+            this.labelRock.Location = new System.Drawing.Point(56, 84);
+            this.labelRock.Name = "labelRock";
+            this.labelRock.Size = new System.Drawing.Size(13, 13);
+            this.labelRock.TabIndex = 8;
+            this.labelRock.Text = "3";
+            // 
+            // labelScissors
+            // 
+            this.labelScissors.AutoSize = true;
+            this.labelScissors.Location = new System.Drawing.Point(56, 16);
+            this.labelScissors.Name = "labelScissors";
+            this.labelScissors.Size = new System.Drawing.Size(13, 13);
+            this.labelScissors.TabIndex = 6;
+            this.labelScissors.Text = "3";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -156,56 +177,6 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 150);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "The rules are:\r\n\r\nThere are 9 cards.\r\n\r\n3 Scissors Cards,\r\n3 Rock Cards,\r\n3 Paper" +
-    " Cards.\r\n\r\nGive them an order,\r\ndo the best to win!";
-            // 
-            // labelScissors
-            // 
-            this.labelScissors.AutoSize = true;
-            this.labelScissors.Location = new System.Drawing.Point(56, 16);
-            this.labelScissors.Name = "labelScissors";
-            this.labelScissors.Size = new System.Drawing.Size(13, 13);
-            this.labelScissors.TabIndex = 6;
-            this.labelScissors.Text = "3";
-            // 
-            // labelRock
-            // 
-            this.labelRock.AutoSize = true;
-            this.labelRock.Location = new System.Drawing.Point(56, 84);
-            this.labelRock.Name = "labelRock";
-            this.labelRock.Size = new System.Drawing.Size(13, 13);
-            this.labelRock.TabIndex = 8;
-            this.labelRock.Text = "3";
-            // 
-            // labelPaper
-            // 
-            this.labelPaper.AutoSize = true;
-            this.labelPaper.Location = new System.Drawing.Point(56, 147);
-            this.labelPaper.Name = "labelPaper";
-            this.labelPaper.Size = new System.Drawing.Size(13, 13);
-            this.labelPaper.TabIndex = 9;
-            this.labelPaper.Text = "3";
-            // 
-            // rb1
-            // 
-            this.rb1.AutoSize = true;
-            this.rb1.Location = new System.Drawing.Point(3, 3);
-            this.rb1.Name = "rb1";
-            this.rb1.Size = new System.Drawing.Size(31, 17);
-            this.rb1.TabIndex = 6;
-            this.rb1.TabStop = true;
-            this.rb1.Text = "1";
-            this.rb1.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -215,94 +186,6 @@
             this.label2.Size = new System.Drawing.Size(121, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Cards You Have";
-            // 
-            // rb2
-            // 
-            this.rb2.AutoSize = true;
-            this.rb2.Location = new System.Drawing.Point(3, 26);
-            this.rb2.Name = "rb2";
-            this.rb2.Size = new System.Drawing.Size(31, 17);
-            this.rb2.TabIndex = 8;
-            this.rb2.TabStop = true;
-            this.rb2.Text = "2";
-            this.rb2.UseVisualStyleBackColor = true;
-            // 
-            // rb3
-            // 
-            this.rb3.AutoSize = true;
-            this.rb3.Location = new System.Drawing.Point(3, 49);
-            this.rb3.Name = "rb3";
-            this.rb3.Size = new System.Drawing.Size(31, 17);
-            this.rb3.TabIndex = 9;
-            this.rb3.TabStop = true;
-            this.rb3.Text = "3";
-            this.rb3.UseVisualStyleBackColor = true;
-            // 
-            // rb4
-            // 
-            this.rb4.AutoSize = true;
-            this.rb4.Location = new System.Drawing.Point(3, 72);
-            this.rb4.Name = "rb4";
-            this.rb4.Size = new System.Drawing.Size(31, 17);
-            this.rb4.TabIndex = 10;
-            this.rb4.TabStop = true;
-            this.rb4.Text = "4";
-            this.rb4.UseVisualStyleBackColor = true;
-            // 
-            // rb5
-            // 
-            this.rb5.AutoSize = true;
-            this.rb5.Location = new System.Drawing.Point(3, 95);
-            this.rb5.Name = "rb5";
-            this.rb5.Size = new System.Drawing.Size(31, 17);
-            this.rb5.TabIndex = 11;
-            this.rb5.TabStop = true;
-            this.rb5.Text = "5";
-            this.rb5.UseVisualStyleBackColor = true;
-            // 
-            // rb6
-            // 
-            this.rb6.AutoSize = true;
-            this.rb6.Location = new System.Drawing.Point(3, 118);
-            this.rb6.Name = "rb6";
-            this.rb6.Size = new System.Drawing.Size(31, 17);
-            this.rb6.TabIndex = 12;
-            this.rb6.TabStop = true;
-            this.rb6.Text = "6";
-            this.rb6.UseVisualStyleBackColor = true;
-            // 
-            // rb7
-            // 
-            this.rb7.AutoSize = true;
-            this.rb7.Location = new System.Drawing.Point(3, 141);
-            this.rb7.Name = "rb7";
-            this.rb7.Size = new System.Drawing.Size(31, 17);
-            this.rb7.TabIndex = 13;
-            this.rb7.TabStop = true;
-            this.rb7.Text = "7";
-            this.rb7.UseVisualStyleBackColor = true;
-            // 
-            // rb8
-            // 
-            this.rb8.AutoSize = true;
-            this.rb8.Location = new System.Drawing.Point(40, 3);
-            this.rb8.Name = "rb8";
-            this.rb8.Size = new System.Drawing.Size(31, 17);
-            this.rb8.TabIndex = 14;
-            this.rb8.TabStop = true;
-            this.rb8.Text = "8";
-            this.rb8.UseVisualStyleBackColor = true;
-            // 
-            // rb9
-            // 
-            this.rb9.AutoSize = true;
-            this.rb9.Location = new System.Drawing.Point(40, 26);
-            this.rb9.Name = "rb9";
-            this.rb9.Size = new System.Drawing.Size(31, 17);
-            this.rb9.TabIndex = 15;
-            this.rb9.TabStop = true;
-            this.rb9.Text = "9";
-            this.rb9.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -314,22 +197,6 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Order";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.rb1);
-            this.panel2.Controls.Add(this.rb2);
-            this.panel2.Controls.Add(this.rb9);
-            this.panel2.Controls.Add(this.rb3);
-            this.panel2.Controls.Add(this.rb8);
-            this.panel2.Controls.Add(this.rb4);
-            this.panel2.Controls.Add(this.rb7);
-            this.panel2.Controls.Add(this.rb5);
-            this.panel2.Controls.Add(this.rb6);
-            this.panel2.Location = new System.Drawing.Point(285, 61);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(89, 179);
-            this.panel2.TabIndex = 17;
             // 
             // comboBox1
             // 
@@ -388,22 +255,66 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
+            // lblColor
+            // 
+            this.lblColor.AutoSize = true;
+            this.lblColor.Location = new System.Drawing.Point(213, 408);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(40, 13);
+            this.lblColor.TabIndex = 22;
+            this.lblColor.Text = "           ";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quitToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(386, 24);
+            this.menuStrip1.TabIndex = 23;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // quitToolStripMenuItem
+            // 
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewHelpToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // viewHelpToolStripMenuItem
+            // 
+            this.viewHelpToolStripMenuItem.Name = "viewHelpToolStripMenuItem";
+            this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewHelpToolStripMenuItem.Text = "View Help";
+            this.viewHelpToolStripMenuItem.Click += new System.EventHandler(this.viewHelpToolStripMenuItem_Click);
+            // 
             // CommandView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 506);
+            this.Controls.Add(this.lblColor);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnColor);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listViewResults);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "CommandView";
             this.Text = "CommandView";
             this.Load += new System.EventHandler(this.CommandView_Load);
@@ -412,8 +323,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,26 +340,20 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelPaper;
         private System.Windows.Forms.Label labelRock;
         private System.Windows.Forms.Label labelScissors;
-        private System.Windows.Forms.RadioButton rb1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton rb2;
-        private System.Windows.Forms.RadioButton rb3;
-        private System.Windows.Forms.RadioButton rb4;
-        private System.Windows.Forms.RadioButton rb5;
-        private System.Windows.Forms.RadioButton rb6;
-        private System.Windows.Forms.RadioButton rb7;
-        private System.Windows.Forms.RadioButton rb8;
-        private System.Windows.Forms.RadioButton rb9;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label lblColor;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewHelpToolStripMenuItem;
     }
 }

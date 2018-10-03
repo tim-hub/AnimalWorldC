@@ -12,11 +12,14 @@ namespace AnimalWorldC
 {
     public partial class CommandView : Form, IElementalView
     {
+        public Views.RulesForm ruleForm;
+
         List<Element> elements;
 
         public CommandView()
         {
             InitializeComponent();
+            ruleForm = new Views.RulesForm();
         }
 
         public void RefreshView()
@@ -26,9 +29,9 @@ namespace AnimalWorldC
 
         private void CommandView_Load(object sender, EventArgs e)
         {
+            btnUpdate.Enabled = false;
+            btnCreate.Enabled = true;
             listViewResults.View = View.List;
-            
-
 
             listViewResults.HeaderStyle = ColumnHeaderStyle.None;
 
@@ -76,11 +79,26 @@ namespace AnimalWorldC
             // Allows the user to get help. (The default is false.)
             MyDialog.ShowHelp = true;
             // Sets the initial color select to the current text color.
-            MyDialog.Color = textBox1.ForeColor;
+            MyDialog.Color = lblColor.BackColor;
 
             // Update the text box color if the user clicks OK 
             if (MyDialog.ShowDialog() == DialogResult.OK)
-                textBox1.ForeColor = MyDialog.Color;
+                lblColor.BackColor = MyDialog.Color;
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void viewHelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ruleForm.Show();
         }
     }
 }
