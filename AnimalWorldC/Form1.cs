@@ -22,6 +22,7 @@ namespace AnimalWorldC
         public Form1()
         {
             InitializeComponent();
+            Init();
         }
 
         private void Init()
@@ -32,6 +33,10 @@ namespace AnimalWorldC
             cView = new CommandView();
             gView = new GraphicView();
             fView = new FilterView();
+
+            cView.SetModel(mainModel);
+            gView.SetModel(mainModel);
+            fView.SetModel(mainModel);
 
             mainController.AddView(cView);
             mainController.AddView(gView);

@@ -41,7 +41,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbOrder = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnColor = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -198,10 +198,10 @@
             this.label3.Text = "Order";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // comboBox1
+            // cmbOrder
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbOrder.FormattingEnabled = true;
+            this.cmbOrder.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -211,10 +211,10 @@
             "7",
             "8",
             "9"});
-            this.comboBox1.Location = new System.Drawing.Point(191, 278);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(81, 21);
-            this.comboBox1.TabIndex = 18;
+            this.cmbOrder.Location = new System.Drawing.Point(191, 278);
+            this.cmbOrder.Name = "cmbOrder";
+            this.cmbOrder.Size = new System.Drawing.Size(81, 21);
+            this.cmbOrder.TabIndex = 18;
             // 
             // label4
             // 
@@ -235,7 +235,7 @@
             this.btnColor.TabIndex = 16;
             this.btnColor.Text = "PickColor";
             this.btnColor.UseVisualStyleBackColor = true;
-            this.btnColor.Click += new System.EventHandler(this.button1_Click);
+            this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
             // btnCreate
             // 
@@ -245,6 +245,7 @@
             this.btnCreate.TabIndex = 20;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnUpdate
             // 
@@ -294,7 +295,7 @@
             // viewHelpToolStripMenuItem
             // 
             this.viewHelpToolStripMenuItem.Name = "viewHelpToolStripMenuItem";
-            this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewHelpToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.viewHelpToolStripMenuItem.Text = "View Help";
             this.viewHelpToolStripMenuItem.Click += new System.EventHandler(this.viewHelpToolStripMenuItem_Click);
             // 
@@ -308,7 +309,7 @@
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnColor);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbOrder);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -345,7 +346,7 @@
         private System.Windows.Forms.Label labelScissors;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbOrder;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.Button btnCreate;

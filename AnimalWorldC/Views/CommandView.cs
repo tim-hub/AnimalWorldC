@@ -13,6 +13,7 @@ namespace AnimalWorldC
     public partial class CommandView :  Form, IBaseView
     {
         private MainModel model;
+        private ColorDialog MyDialog = new ColorDialog();
         public Views.RulesForm ruleForm;
 
         List<Element> elements;
@@ -24,6 +25,7 @@ namespace AnimalWorldC
         {
             InitializeComponent();
             ruleForm = new Views.RulesForm();
+            
         }
 
         public void SetModel(MainModel model)
@@ -33,7 +35,11 @@ namespace AnimalWorldC
 
         public void RefreshView()
         {
-
+            listViewResults.Clear();
+            foreach (Element e in model.PlayerList)
+            {
+                listViewResults.Items.Add(e.name + e.color);
+            }
         }
 
         private void CommandView_Load(object sender, EventArgs e)
@@ -44,10 +50,7 @@ namespace AnimalWorldC
 
             listViewResults.HeaderStyle = ColumnHeaderStyle.None;
 
-            elements = new List<Element>();
 
-            elements.Add(new Paper());
-            elements.Add(new Paper());
 
             listViewResults.Items.Add(
                     new ListViewItem(  "aasd" )
@@ -80,15 +83,16 @@ namespace AnimalWorldC
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnColor_Click(object sender, EventArgs e)
         {
-            ColorDialog MyDialog = new ColorDialog();
+            
             // Keeps the user from selecting a custom color.
             MyDialog.AllowFullOpen = false;
             // Allows the user to get help. (The default is false.)
             MyDialog.ShowHelp = true;
             // Sets the initial color select to the current text color.
             MyDialog.Color = lblColor.BackColor;
+            
 
             // Update the text box color if the user clicks OK 
             if (MyDialog.ShowDialog() == DialogResult.OK)
@@ -108,6 +112,29 @@ namespace AnimalWorldC
         private void viewHelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ruleForm.Show();
+        }
+
+        private void CreateOne()
+        {
+            Paper paper;
+            if (rbPaper.Checked)
+            {
+                paper =new Paper();
+
+                if (MyDialog.Color != null)
+                {
+                    paper.SetColor(MyDialog.Color);
+                }
+
+                model.AddOne(paper);
+            }
+
+            RefreshView();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            CreateOne();
         }
     }
 }

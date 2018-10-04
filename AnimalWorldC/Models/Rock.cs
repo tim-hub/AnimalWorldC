@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AnimalWorldC
 {
-    class Rock : Element
+    class Rock 
     {
     }
 }
