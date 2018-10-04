@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace AnimalWorldC
 {
-    public interface IElementalView
+    public interface IBaseView
     {
         void RefreshView();
+        void SetModel(MainModel model);
+  
     }
 }

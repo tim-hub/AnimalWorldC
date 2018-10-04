@@ -16,7 +16,7 @@ namespace AnimalWorldC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CommandView());
+            Application.Run(new Form1());
         }
     }
 }

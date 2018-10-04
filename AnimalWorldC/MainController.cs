@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AnimalWorldC
 {
-    class MainController
+    public class MainController
     {
         private ArrayList views;
         
@@ -22,7 +22,7 @@ namespace AnimalWorldC
         /// add a view
         /// </summary>
         /// <param name="view"></param>
-        public void AddView(IElementalView view)
+        public void AddView(IBaseView view)
         {
             views.Add(view);
         }
@@ -32,7 +32,7 @@ namespace AnimalWorldC
         /// </summary>
         public void UpdateViews()
         {
-            foreach (IElementalView view in views)
+            foreach (IBaseView view in views)
             {
                 view.RefreshView();
             }

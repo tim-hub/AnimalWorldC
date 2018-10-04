@@ -10,16 +10,25 @@ using System.Windows.Forms;
 
 namespace AnimalWorldC
 {
-    public partial class CommandView : Form, IElementalView
+    public partial class CommandView :  Form, IBaseView
     {
+        private MainModel model;
         public Views.RulesForm ruleForm;
 
         List<Element> elements;
 
+        /// <summary>
+        /// initialize the view and sub view.
+        /// </summary>
         public CommandView()
         {
             InitializeComponent();
             ruleForm = new Views.RulesForm();
+        }
+
+        public void SetModel(MainModel model)
+        {
+            this.model = model;
         }
 
         public void RefreshView()

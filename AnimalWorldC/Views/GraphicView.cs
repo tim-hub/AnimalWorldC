@@ -10,8 +10,9 @@ using System.Windows.Forms;
 
 namespace AnimalWorldC
 {
-    public partial class GraphicView : Form, IElementalView
+    public partial class GraphicView : Form, IBaseView
     {
+        private MainModel model;
         public GraphicView()
         {
             InitializeComponent();
@@ -23,7 +24,17 @@ namespace AnimalWorldC
             
         }
 
+        public void SetModel(MainModel model)
+        {
+            this.model = model;
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
