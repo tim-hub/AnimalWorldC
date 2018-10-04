@@ -10,14 +10,29 @@ namespace AnimalWorldC
 {
     public abstract class Element
     {
-        public int id;
+        protected int id;
 
-        
-        public string name ;
+        protected string name ;
         public Color color;
         
+        public int Id
+        {
+            get { return id; }
+        }
+        public string Name
+        {
+            get { return name; }
+        }
 
+        public void SetColor(Color c)
+        {
+            this.color = c;
+        }
+        public override string ToString()
+        {
+            return name;
+        }
         public abstract int Comparing(int i);
-        
+        public abstract Image getImage();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,7 @@ namespace AnimalWorldC
         private ColorDialog MyDialog = new ColorDialog();
         public Views.RulesForm ruleForm;
 
-        List<Element> elements;
+        private Dictionary<RadioButton, Label> elementsUIDict;
 
         /// <summary>
         /// initialize the view and sub view.
@@ -25,6 +26,12 @@ namespace AnimalWorldC
         {
             InitializeComponent();
             ruleForm = new Views.RulesForm();
+
+            // init ui dictionary
+            elementsUIDict = new Dictionary<RadioButton, Label>();
+            elementsUIDict.Add(rbScissors, labelScissors);
+            elementsUIDict.Add(rbRock, labelRock);
+            elementsUIDict.Add(rbPaper, labelPaper);
             
         }
 
@@ -38,7 +45,7 @@ namespace AnimalWorldC
             listViewResults.Clear();
             foreach (Element e in model.PlayerList)
             {
-                listViewResults.Items.Add(e.name + e.color);
+                listViewResults.Items.Add(e.Name + e.color);
             }
         }
 
@@ -50,6 +57,10 @@ namespace AnimalWorldC
 
             listViewResults.HeaderStyle = ColumnHeaderStyle.None;
 
+
+            pictureBox3.Image = Properties.Resources.rock;
+
+            
 
 
             listViewResults.Items.Add(
@@ -114,27 +125,70 @@ namespace AnimalWorldC
             ruleForm.Show();
         }
 
+        private void CreatingValidation(RadioButton rb, Element element)
+        {
+            int j = 0;
+            if (Int32.TryParse( elementsUIDict[rb].Text, out j))
+            {
+                if (j > 0)
+                {
+                    j = j - 1;
+
+                    if (MyDialog.Color != null)
+                    {
+                        element.SetColor(MyDialog.Color);
+                    }
+
+                    model.AddOne(element);
+                    elementsUIDict[rb].Text = (j ).ToString();
+
+                    if (j == 0)
+                    {
+                        elementsUIDict[rb].Enabled = false;
+                        rb.Enabled = false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Your are running out of "+element.ToString());
+                }
+            }
+        }
+
         private void CreateOne()
         {
-            Paper paper;
-            if (rbPaper.Checked)
+           
+            if (rbPaper.Checked )
             {
-                paper =new Paper();
+                Paper paper;
+                paper = new Paper();
 
-                if (MyDialog.Color != null)
-                {
-                    paper.SetColor(MyDialog.Color);
-                }
+                CreatingValidation(rbPaper, paper);
 
-                model.AddOne(paper);
+            }
+            if (rbRock.Checked)
+            {
+                Element rock;
+                rock = new Rock();
+
+                CreatingValidation(rbRock, rock);
+
+            }
+            if (rbScissors.Checked)
+            {
+                Element scissors;
+                scissors = new Scissors();
+
+                CreatingValidation(rbScissors, scissors);
+
             }
 
-            RefreshView();
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
             CreateOne();
+            RefreshView();
         }
     }
 }

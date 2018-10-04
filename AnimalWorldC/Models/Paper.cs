@@ -9,19 +9,19 @@ namespace AnimalWorldC
 {
     class Paper:Element
     { 
-
         public Paper()
         {
-            id = 2;
-            name = "Paper";
+            this.id = 2;
+            this.name = "Paper";
 
         }
 
-        public void SetColor(Color c)
-        {
-            this.color = c;
-        }
-
+        /// <summary>
+        /// Comparing ang getting results.
+        /// It is unique for each element.
+        /// </summary>
+        /// <param name="i"></param>
+        /// <returns></returns>
         public override int Comparing(int i)
         {
             if (i == 0)
@@ -32,6 +32,14 @@ namespace AnimalWorldC
                 return 1;
             }
             return 0;
+        }
+        /// <summary>
+        /// this is for showing image in view
+        /// </summary>
+        /// <returns></returns>
+        public override Image getImage()
+        {
+            return Properties.Resources.Rock_paper_scissors__paper_;
         }
     }
 }
