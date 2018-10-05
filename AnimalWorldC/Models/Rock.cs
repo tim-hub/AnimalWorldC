@@ -40,7 +40,7 @@ namespace AnimalWorldC
         /// this is for showing image in view
         /// </summary>
         /// <returns></returns>
-        public override Image getImage()
+        public override Image GetImage()
         {
             return Properties.Resources.rock;
         }

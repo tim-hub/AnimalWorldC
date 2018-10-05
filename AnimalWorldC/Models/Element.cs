@@ -33,6 +33,6 @@ namespace AnimalWorldC
             return name;
         }
         public abstract int Comparing(int i);
-        public abstract Image getImage();
+        public abstract Image GetImage();
     }
 }

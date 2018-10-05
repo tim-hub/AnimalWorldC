@@ -11,7 +11,7 @@ namespace AnimalWorldC
     {
         public Scissors()
         {
-            this.id = 2;
+            this.id = 0;
             this.name = "Scissors";
 
         }
@@ -26,11 +26,11 @@ namespace AnimalWorldC
         /// <returns></returns>
         public override int Comparing(int i)
         {
-            if (i == 0)
+            if (i == 1)
             {
                 return -1;
             }
-            else if (i == 1)
+            else if (i == 2)
             {
                 return 1;
             }
@@ -40,7 +40,7 @@ namespace AnimalWorldC
         /// this is for showing image in view
         /// </summary>
         /// <returns></returns>
-        public override Image getImage()
+        public override Image GetImage()
         {
             return Properties.Resources.scissors;
         }

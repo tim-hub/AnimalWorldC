@@ -11,8 +11,8 @@ namespace AnimalWorldC
     {
         
 
-        private ArrayList playerList;
-        private LinkedList<Element> AIList;
+        private List<Element> playerList;
+        private List<Element> AIList;
 
         private MainController mainController;
 
@@ -23,7 +23,7 @@ namespace AnimalWorldC
         public MainModel(MainController controller)
         {
             this.mainController = controller;
-            this.playerList = new ArrayList();
+            this.playerList = new List<Element>();
         }
 
         public void UpdateViews()
@@ -34,7 +34,7 @@ namespace AnimalWorldC
         /// <summary>
         /// the get property for player list
         /// </summary>
-        public ArrayList PlayerList
+        public List<Element> PlayerList
         {
             get
             {
@@ -42,7 +42,7 @@ namespace AnimalWorldC
             }
         }
 
-        public ArrayList getAIList()
+        public List<Element> getAIList()
         {
             return null;
         }
