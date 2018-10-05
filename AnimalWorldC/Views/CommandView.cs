@@ -40,8 +40,13 @@ namespace AnimalWorldC
             this.model = model;
         }
 
+        /// <summary>
+        /// This method can be called through controller.
+        /// </summary>
+
         public void RefreshView()
         {
+            
             listViewResults.Clear();
             foreach (Element e in model.PlayerList)
             {
@@ -147,6 +152,10 @@ namespace AnimalWorldC
                         elementsUIDict[rb].Enabled = false;
                         rb.Enabled = false;
                     }
+
+                    // send the data change to the model,
+                    // the model will call update views through controller,
+                    // UpdateViews will be run after add one.
                 }
                 else
                 {
@@ -188,7 +197,6 @@ namespace AnimalWorldC
         private void btnCreate_Click(object sender, EventArgs e)
         {
             CreateOne();
-            RefreshView();
         }
     }
 }

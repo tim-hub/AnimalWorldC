@@ -26,7 +26,7 @@ namespace AnimalWorldC
             this.playerList = new ArrayList();
         }
 
-        private void updateViews()
+        public void UpdateViews()
         {
             this.mainController.UpdateViews();
         }
@@ -50,13 +50,13 @@ namespace AnimalWorldC
         public void AddOne(Element element)
         {
             this.playerList.Add(element);
-            updateViews();
+            UpdateViews();
         }
 
         public void RemoveOne(Element element)
         {
             this.playerList.Remove(element);
-            updateViews();
+            UpdateViews();
         } 
     }
 

@@ -38,5 +38,15 @@ namespace AnimalWorldC
         {
 
         }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pb7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
