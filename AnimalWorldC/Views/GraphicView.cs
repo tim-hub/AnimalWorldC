@@ -71,6 +71,19 @@ namespace AnimalWorldC
                     if (model.PlayerList[i].GetColor() != null)
                     {
                         pbs[i].BackColor = model.PlayerList[i].GetColor();
+
+                        if (model.PlayerList[i].GetType() == typeof(Rock) )
+                        {
+                            Rock r = (Rock)model.PlayerList[i];
+
+                            if (!r.NotSpecialCursor)
+                            {
+                                pbs[i].Cursor = Cursors.Cross;
+                            }
+                            
+                        }
+
+                        
                     }
                 }
                 

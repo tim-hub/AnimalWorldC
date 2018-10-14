@@ -9,11 +9,29 @@ namespace AnimalWorldC
 {
     class Rock :Element
     {
+        /// <summary>
+        /// this is an special attribute for rock
+        /// rock has special cursor
+        /// </summary>
+        private bool notSpecialCursor;
+
         public Rock()
         {
             this.id = 1;
             this.name = "Rock";
 
+        }
+
+        /// <summary>
+        /// Unique setter and getter for rock only
+        /// </summary>
+        public bool NotSpecialCursor
+        {
+            get { return this.notSpecialCursor; }
+            set
+            {
+                this.notSpecialCursor = value;
+            }
         }
 
 
@@ -45,6 +63,20 @@ namespace AnimalWorldC
 
             
             return Properties.Resources.rock;
+        }
+
+        public override string ToString()
+        {
+            if (this.notSpecialCursor)
+            {
+                return name + "(" + id + ")" + ", Color: " + this.GetColor() + ", using Default Cursor";
+
+            }
+            else
+            {
+                return name + "(" + id + ")" + ", Color: " + this.GetColor() + ", Using Special Cross Cursor";
+            }
+
         }
     }
 }
