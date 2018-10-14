@@ -50,30 +50,18 @@ namespace AnimalWorldC
             listViewResults.Clear();
             foreach (Element e in model.PlayerList)
             {
-                listViewResults.Items.Add(e.Name + e.GetColor());
+                listViewResults.Items.Add(e.ToString());
             }
         }
 
         private void CommandView_Load(object sender, EventArgs e)
         {
             btnUpdate.Enabled = false;
+            btnUpdate.Enabled = false;
             btnCreate.Enabled = true;
             listViewResults.View = View.List;
 
             listViewResults.HeaderStyle = ColumnHeaderStyle.None;
-
-
-            pictureBox3.Image = Properties.Resources.rock;
-
-            
-
-
-            listViewResults.Items.Add(
-                    new ListViewItem(  "aasd" )
-                );
-            listViewResults.Items.Add(
-                new ListViewItem( "1adads")
-            );
 
             listViewResults.GridLines = true;
 

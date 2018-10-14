@@ -42,6 +42,8 @@ namespace AnimalWorldC
         /// <returns></returns>
         public override Image GetImage()
         {
+
+            
             return Properties.Resources.rock;
         }
     }

@@ -148,7 +148,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.pictureBox1.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(0, 130);
             this.pictureBox1.Name = "pictureBox1";

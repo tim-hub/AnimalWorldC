@@ -9,13 +9,41 @@ namespace AnimalWorldC
 {
     class Paper:Element
     {
+        /// <summary>
+        /// this is unique for paper
+        /// papaer can be rotated
+        /// </summary>
+        private bool rotating180Degrees;
+
+        public bool Rotating180Degrees
+        {
+            get { return this.rotating180Degrees; }
+            set { this.rotating180Degrees = value; }
+        }
 
         public Paper()
         {
+            // it is better to set properties through config file
+            // but hard-coding for now.
             this.id = 2;
             this.name = "Paper";
 
         }
+
+        /// <summary>
+        /// This is unique for paper
+        /// It can be rotated
+        /// </summary>
+        /// <param name="bm"></param>
+        /// <returns></returns>
+        private Image RotateMySelf(Bitmap bm)
+        {
+            Bitmap r;
+            r = Properties.Resources.scissors;
+            r.RotateFlip(RotateFlipType.Rotate180FlipNone);
+            return r;
+        }
+
 
         /// <summary>
         /// Comparing ang getting results.
@@ -40,7 +68,30 @@ namespace AnimalWorldC
         /// <returns></returns>
         public override Image GetImage()
         {
-            return Properties.Resources.Rock_paper_scissors__paper_;
+            if (this.rotating180Degrees)
+            {
+                return  RotateMySelf(Properties.Resources.paper);
+
+            }
+            else
+            {
+                return Properties.Resources.paper;
+            }
+
+        }
+
+        public override string ToString()
+        {
+            if (this.rotating180Degrees)
+            {
+                return name + "("+id+")"+ ", Color: " + this.GetColor() + ", Rotating 180 degrees";
+
+            }
+            else
+            {
+                return name + "(" + id + ")" + ", Color: " + this.GetColor() + ", Rotating 0 degrees";
+            }
+            
         }
     }
 }

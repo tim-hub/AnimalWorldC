@@ -98,7 +98,7 @@
             // pb2
             // 
             this.pb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb2.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.pb2.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb2.InitialImage = null;
             this.pb2.Location = new System.Drawing.Point(115, 367);
             this.pb2.Name = "pb2";
@@ -133,7 +133,7 @@
             // pb4
             // 
             this.pb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb4.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.pb4.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb4.InitialImage = null;
             this.pb4.Location = new System.Drawing.Point(227, 367);
             this.pb4.Name = "pb4";
@@ -145,7 +145,7 @@
             // pb5
             // 
             this.pb5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb5.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.pb5.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb5.InitialImage = null;
             this.pb5.Location = new System.Drawing.Point(283, 367);
             this.pb5.Name = "pb5";
@@ -157,7 +157,7 @@
             // pb6
             // 
             this.pb6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb6.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.pb6.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb6.InitialImage = null;
             this.pb6.Location = new System.Drawing.Point(339, 367);
             this.pb6.Name = "pb6";
@@ -169,7 +169,7 @@
             // pb7
             // 
             this.pb7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb7.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.pb7.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb7.InitialImage = null;
             this.pb7.Location = new System.Drawing.Point(395, 367);
             this.pb7.Name = "pb7";
@@ -182,7 +182,7 @@
             // pb8
             // 
             this.pb8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb8.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.pb8.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb8.InitialImage = null;
             this.pb8.Location = new System.Drawing.Point(451, 367);
             this.pb8.Name = "pb8";
@@ -194,7 +194,7 @@
             // ai8
             // 
             this.ai8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ai8.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.ai8.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.ai8.InitialImage = null;
             this.ai8.Location = new System.Drawing.Point(451, 3);
             this.ai8.Name = "ai8";
@@ -206,7 +206,7 @@
             // ai7
             // 
             this.ai7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ai7.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.ai7.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.ai7.InitialImage = null;
             this.ai7.Location = new System.Drawing.Point(395, 3);
             this.ai7.Name = "ai7";
@@ -218,7 +218,7 @@
             // ai6
             // 
             this.ai6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ai6.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.ai6.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.ai6.InitialImage = null;
             this.ai6.Location = new System.Drawing.Point(339, 3);
             this.ai6.Name = "ai6";
@@ -230,7 +230,7 @@
             // ai5
             // 
             this.ai5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ai5.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.ai5.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.ai5.InitialImage = null;
             this.ai5.Location = new System.Drawing.Point(283, 3);
             this.ai5.Name = "ai5";
@@ -242,7 +242,7 @@
             // ai4
             // 
             this.ai4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ai4.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.ai4.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.ai4.InitialImage = null;
             this.ai4.Location = new System.Drawing.Point(227, 3);
             this.ai4.Name = "ai4";
@@ -254,7 +254,7 @@
             // ai3
             // 
             this.ai3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ai3.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.ai3.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.ai3.InitialImage = null;
             this.ai3.Location = new System.Drawing.Point(171, 3);
             this.ai3.Name = "ai3";
@@ -288,7 +288,7 @@
             // pb3
             // 
             this.pb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb3.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.pb3.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb3.InitialImage = null;
             this.pb3.Location = new System.Drawing.Point(171, 367);
             this.pb3.Name = "pb3";
@@ -300,7 +300,7 @@
             // ai2
             // 
             this.ai2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ai2.Image = global::AnimalWorldC.Properties.Resources.Rock_paper_scissors__paper_;
+            this.ai2.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.ai2.InitialImage = null;
             this.ai2.Location = new System.Drawing.Point(115, 3);
             this.ai2.Name = "ai2";

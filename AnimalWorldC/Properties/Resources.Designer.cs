@@ -63,9 +63,9 @@ namespace AnimalWorldC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap rock {
+        internal static System.Drawing.Bitmap drinking {
             get {
-                object obj = ResourceManager.GetObject("rock", resourceCulture);
+                object obj = ResourceManager.GetObject("drinking", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,19 @@ namespace AnimalWorldC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Rock_paper_scissors__paper_ {
+        internal static System.Drawing.Bitmap paper {
             get {
-                object obj = ResourceManager.GetObject("Rock-paper-scissors_(paper)", resourceCulture);
+                object obj = ResourceManager.GetObject("paper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rock {
+            get {
+                object obj = ResourceManager.GetObject("rock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -9,8 +9,11 @@ namespace AnimalWorldC
 {
     class Scissors:Element
     {
-
+        /// <summary>
+        /// the unique attribute for scissors
+        /// </summary>
         private bool flipping;
+
 
         public bool Flipping
         {
@@ -26,6 +29,20 @@ namespace AnimalWorldC
 
         }
 
+        /// <summary>
+        /// the unique method for scissors
+        /// </summary>
+        /// <param name="bm"></param>
+        /// <returns></returns>
+
+        private Bitmap FlipMySelf(Bitmap bm)
+        {
+
+            Bitmap r;
+            r = Properties.Resources.scissors;
+            r.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            return r;
+        }
 
 
         /// <summary>
@@ -48,17 +65,36 @@ namespace AnimalWorldC
         }
         /// <summary>
         /// this is for showing image in view
+        /// It overrides abstract method from parent class
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Image</returns>
         public override Image GetImage()
         {
 
-            Bitmap r;
-            r= Properties.Resources.scissors;
 
-            r.RotateFlip(RotateFlipType.RotateNoneFlipX);
+            if (this.flipping)
+            {
+                return FlipMySelf(Properties.Resources.scissors);
+            }
+            else
+            {
+                return Properties.Resources.scissors;
+            }
+           
+        }
 
-            return r;
+        public override string ToString()
+        {
+            if (this.flipping)
+            {
+                return name + "(" + id + ")" + ", Color: " + this.GetColor() + ", Flipping";
+
+            }
+            else
+            {
+                return name + "(" + id + ")" + ", Color: " + this.GetColor() + ", Not Flipping";
+            }
+
         }
 
 
