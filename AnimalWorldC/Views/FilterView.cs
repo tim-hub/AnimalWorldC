@@ -17,10 +17,16 @@ namespace AnimalWorldC
         {
             InitializeComponent();
         }
-
         public void RefreshView()
         {
-
+            listViewResults.Clear();
+            foreach (Element e in model.PlayerList)
+            {
+                if (cmbType.SelectedIndex == e.Id || cmbType.SelectedItem == null)
+                {
+                    listViewResults.Items.Add(e.Name + e.GetColor());
+                }
+            }
         }
         public void SetModel(MainModel model)
         {
@@ -30,6 +36,11 @@ namespace AnimalWorldC
         private void FilterView_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            model.UpdateViews();
         }
     }
 }

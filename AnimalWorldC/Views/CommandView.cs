@@ -50,7 +50,7 @@ namespace AnimalWorldC
             listViewResults.Clear();
             foreach (Element e in model.PlayerList)
             {
-                listViewResults.Items.Add(e.Name + e.color);
+                listViewResults.Items.Add(e.Name + e.GetColor());
             }
         }
 
@@ -197,6 +197,16 @@ namespace AnimalWorldC
         private void btnCreate_Click(object sender, EventArgs e)
         {
             CreateOne();
+        }
+
+        private void listViewResults_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbOrder_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -68,9 +68,9 @@ namespace AnimalWorldC
                 {
                     pbs[i].Image = model.PlayerList[i].GetImage();
 
-                    if (model.PlayerList[i].color != null)
+                    if (model.PlayerList[i].GetColor() != null)
                     {
-                        pbs[i].BackColor = model.PlayerList[i].color;
+                        pbs[i].BackColor = model.PlayerList[i].GetColor();
                     }
                 }
                 

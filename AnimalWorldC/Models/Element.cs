@@ -13,7 +13,7 @@ namespace AnimalWorldC
         protected int id;
 
         protected string name ;
-        public Color color;
+        private Color color;
         
         public int Id
         {
@@ -22,6 +22,11 @@ namespace AnimalWorldC
         public string Name
         {
             get { return name; }
+        }
+
+        public Color GetColor()
+        {
+            return this.color;
         }
 
         public void SetColor(Color c)

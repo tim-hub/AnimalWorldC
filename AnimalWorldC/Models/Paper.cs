@@ -8,7 +8,8 @@ using System.Drawing;
 namespace AnimalWorldC
 {
     class Paper:Element
-    { 
+    {
+
         public Paper()
         {
             this.id = 2;

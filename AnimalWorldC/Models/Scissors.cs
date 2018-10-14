@@ -9,6 +9,16 @@ namespace AnimalWorldC
 {
     class Scissors:Element
     {
+
+        private bool flipping;
+
+        public bool Flipping
+        {
+            get { return this.flipping; }
+            set { this.flipping = value; }
+        }
+
+
         public Scissors()
         {
             this.id = 0;
@@ -42,7 +52,13 @@ namespace AnimalWorldC
         /// <returns></returns>
         public override Image GetImage()
         {
-            return Properties.Resources.scissors;
+
+            Bitmap r;
+            r= Properties.Resources.scissors;
+
+            r.RotateFlip(RotateFlipType.RotateNoneFlipX);
+
+            return r;
         }
 
 
