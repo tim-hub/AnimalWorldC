@@ -235,6 +235,15 @@ namespace AnimalWorldC
 
         private void tbPaperRotation_Scroll(object sender, EventArgs e)
         {
+            if (tbPaperRotation.Value  >=90)
+            {
+                tbPaperRotation.Value = 180;
+            }
+            else
+            {
+                tbPaperRotation.Value = 0;
+            }
+
             lblPaperRotation.Text = "" + tbPaperRotation.Value;
         }
 
@@ -278,6 +287,22 @@ namespace AnimalWorldC
                 tbPaperRotation.Enabled = true;
 
             }
+        }
+
+        private void listViewResults_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (listViewResults.FocusedItem.Bounds.Contains(e.Location))
+                {
+                    contextMenuStrip1.Show(Cursor.Position);
+                }
+            }
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }
