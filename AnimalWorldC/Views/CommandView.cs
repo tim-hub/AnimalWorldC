@@ -186,21 +186,26 @@ namespace AnimalWorldC
                 Paper paper;
                 paper = new Paper();
 
+                paper.Rotating180Degrees = tbPaperRotation.Value == 180;
+
                 CreatingValidation(rbPaper, paper);
 
             }
             if (rbRock.Checked)
             {
-                Element rock;
+                Rock rock;
                 rock = new Rock();
+                rock.NotSpecialCursor = cmbRockCursor.SelectedIndex == 1;
+                
 
                 CreatingValidation(rbRock, rock);
 
             }
             if (rbScissors.Checked)
             {
-                Element scissors;
+                Scissors scissors;
                 scissors = new Scissors();
+                scissors.Flipping = cbScissorsFlipping.Checked;
 
                 CreatingValidation(rbScissors, scissors);
 
@@ -237,11 +242,12 @@ namespace AnimalWorldC
         {
             if (cmbRockCursor.SelectedIndex == 1)
             {
-                lblRockCursor.Text = "Cross";
+                lblRockCursor.Text = "Mouse";
+                
             }
             else
             {
-                lblRockCursor.Text = "Default";
+                lblRockCursor.Text = "Cross";
             }
         }
 
@@ -259,7 +265,7 @@ namespace AnimalWorldC
             if (rbRock.Checked)
             {
                 DisableAllProperties();
-                cmbRockCursor.Enabled = false;
+                cmbRockCursor.Enabled = true;
 
             }
         }

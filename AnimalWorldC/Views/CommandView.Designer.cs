@@ -34,6 +34,11 @@
             this.rbPaper = new System.Windows.Forms.RadioButton();
             this.rbRock = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblRockCursor = new System.Windows.Forms.Label();
+            this.lblPaperRotation = new System.Windows.Forms.Label();
+            this.cmbRockCursor = new System.Windows.Forms.ComboBox();
+            this.tbPaperRotation = new System.Windows.Forms.TrackBar();
+            this.cbScissorsFlipping = new System.Windows.Forms.CheckBox();
             this.labelPaper = new System.Windows.Forms.Label();
             this.labelRock = new System.Windows.Forms.Label();
             this.labelScissors = new System.Windows.Forms.Label();
@@ -50,20 +55,15 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbScissorsFlipping = new System.Windows.Forms.CheckBox();
-            this.tbPaperRotation = new System.Windows.Forms.TrackBar();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbRockCursor = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblPaperRotation = new System.Windows.Forms.Label();
-            this.lblRockCursor = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPaperRotation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPaperRotation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,6 +133,58 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(362, 180);
             this.panel1.TabIndex = 4;
+            // 
+            // lblRockCursor
+            // 
+            this.lblRockCursor.AutoSize = true;
+            this.lblRockCursor.Location = new System.Drawing.Point(306, 82);
+            this.lblRockCursor.Name = "lblRockCursor";
+            this.lblRockCursor.Size = new System.Drawing.Size(33, 13);
+            this.lblRockCursor.TabIndex = 29;
+            this.lblRockCursor.Text = "Cross";
+            // 
+            // lblPaperRotation
+            // 
+            this.lblPaperRotation.AutoSize = true;
+            this.lblPaperRotation.Location = new System.Drawing.Point(319, 146);
+            this.lblPaperRotation.Name = "lblPaperRotation";
+            this.lblPaperRotation.Size = new System.Drawing.Size(13, 13);
+            this.lblPaperRotation.TabIndex = 28;
+            this.lblPaperRotation.Text = "0";
+            // 
+            // cmbRockCursor
+            // 
+            this.cmbRockCursor.FormattingEnabled = true;
+            this.cmbRockCursor.Items.AddRange(new object[] {
+            "0 Cross Cursor",
+            "1 MouseDefault Cursor"});
+            this.cmbRockCursor.Location = new System.Drawing.Point(196, 79);
+            this.cmbRockCursor.Name = "cmbRockCursor";
+            this.cmbRockCursor.Size = new System.Drawing.Size(104, 21);
+            this.cmbRockCursor.TabIndex = 27;
+            this.cmbRockCursor.SelectedIndexChanged += new System.EventHandler(this.cmbRockCursor_SelectedIndexChanged);
+            // 
+            // tbPaperRotation
+            // 
+            this.tbPaperRotation.LargeChange = 180;
+            this.tbPaperRotation.Location = new System.Drawing.Point(196, 132);
+            this.tbPaperRotation.Maximum = 180;
+            this.tbPaperRotation.Name = "tbPaperRotation";
+            this.tbPaperRotation.Size = new System.Drawing.Size(104, 45);
+            this.tbPaperRotation.SmallChange = 180;
+            this.tbPaperRotation.TabIndex = 26;
+            this.tbPaperRotation.TickFrequency = 180;
+            this.tbPaperRotation.Scroll += new System.EventHandler(this.tbPaperRotation_Scroll);
+            // 
+            // cbScissorsFlipping
+            // 
+            this.cbScissorsFlipping.AutoSize = true;
+            this.cbScissorsFlipping.Location = new System.Drawing.Point(196, 16);
+            this.cbScissorsFlipping.Name = "cbScissorsFlipping";
+            this.cbScissorsFlipping.Size = new System.Drawing.Size(104, 17);
+            this.cbScissorsFlipping.TabIndex = 25;
+            this.cbScissorsFlipping.Text = "Scissors Flipping";
+            this.cbScissorsFlipping.UseVisualStyleBackColor = true;
             // 
             // labelPaper
             // 
@@ -288,61 +340,9 @@
             this.panel2.Size = new System.Drawing.Size(173, 32);
             this.panel2.TabIndex = 24;
             // 
-            // cbScissorsFlipping
-            // 
-            this.cbScissorsFlipping.AutoSize = true;
-            this.cbScissorsFlipping.Location = new System.Drawing.Point(196, 16);
-            this.cbScissorsFlipping.Name = "cbScissorsFlipping";
-            this.cbScissorsFlipping.Size = new System.Drawing.Size(104, 17);
-            this.cbScissorsFlipping.TabIndex = 25;
-            this.cbScissorsFlipping.Text = "Scissors Flipping";
-            this.cbScissorsFlipping.UseVisualStyleBackColor = true;
-            // 
-            // tbPaperRotation
-            // 
-            this.tbPaperRotation.LargeChange = 180;
-            this.tbPaperRotation.Location = new System.Drawing.Point(196, 132);
-            this.tbPaperRotation.Maximum = 180;
-            this.tbPaperRotation.Name = "tbPaperRotation";
-            this.tbPaperRotation.Size = new System.Drawing.Size(104, 45);
-            this.tbPaperRotation.SmallChange = 180;
-            this.tbPaperRotation.TabIndex = 26;
-            this.tbPaperRotation.TickFrequency = 180;
-            this.tbPaperRotation.Scroll += new System.EventHandler(this.tbPaperRotation_Scroll);
-            // 
             // bindingSource1
             // 
             this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
-            // 
-            // cmbRockCursor
-            // 
-            this.cmbRockCursor.FormattingEnabled = true;
-            this.cmbRockCursor.Items.AddRange(new object[] {
-            "0 Default Cursor",
-            "1 Cross Cursor"});
-            this.cmbRockCursor.Location = new System.Drawing.Point(196, 79);
-            this.cmbRockCursor.Name = "cmbRockCursor";
-            this.cmbRockCursor.Size = new System.Drawing.Size(104, 21);
-            this.cmbRockCursor.TabIndex = 27;
-            this.cmbRockCursor.SelectedIndexChanged += new System.EventHandler(this.cmbRockCursor_SelectedIndexChanged);
-            // 
-            // lblPaperRotation
-            // 
-            this.lblPaperRotation.AutoSize = true;
-            this.lblPaperRotation.Location = new System.Drawing.Point(319, 146);
-            this.lblPaperRotation.Name = "lblPaperRotation";
-            this.lblPaperRotation.Size = new System.Drawing.Size(13, 13);
-            this.lblPaperRotation.TabIndex = 28;
-            this.lblPaperRotation.Text = "0";
-            // 
-            // lblRockCursor
-            // 
-            this.lblRockCursor.AutoSize = true;
-            this.lblRockCursor.Location = new System.Drawing.Point(306, 82);
-            this.lblRockCursor.Name = "lblRockCursor";
-            this.lblRockCursor.Size = new System.Drawing.Size(41, 13);
-            this.lblRockCursor.TabIndex = 29;
-            this.lblRockCursor.Text = "Default";
             // 
             // CommandView
             // 
@@ -361,6 +361,7 @@
             this.Load += new System.EventHandler(this.CommandView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPaperRotation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -368,7 +369,6 @@
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPaperRotation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

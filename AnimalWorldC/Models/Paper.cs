@@ -39,7 +39,7 @@ namespace AnimalWorldC
         private Image RotateMySelf(Bitmap bm)
         {
             Bitmap r;
-            r = Properties.Resources.scissors;
+            r = Properties.Resources.paper;
             r.RotateFlip(RotateFlipType.Rotate180FlipNone);
             return r;
         }
