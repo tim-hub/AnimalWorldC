@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.listViewResults = new System.Windows.Forms.ListView();
             this.rbScissors = new System.Windows.Forms.RadioButton();
             this.rbPaper = new System.Windows.Forms.RadioButton();
@@ -40,9 +41,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbOrder = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnColor = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -51,18 +49,29 @@
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cbScissorsFlipping = new System.Windows.Forms.CheckBox();
+            this.tbPaperRotation = new System.Windows.Forms.TrackBar();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbRockCursor = new System.Windows.Forms.ComboBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lblPaperRotation = new System.Windows.Forms.Label();
+            this.lblRockCursor = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPaperRotation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // listViewResults
             // 
             this.listViewResults.Location = new System.Drawing.Point(12, 27);
             this.listViewResults.Name = "listViewResults";
-            this.listViewResults.Size = new System.Drawing.Size(362, 213);
+            this.listViewResults.Size = new System.Drawing.Size(362, 165);
             this.listViewResults.TabIndex = 0;
             this.listViewResults.UseCompatibleStateImageBehavior = false;
             this.listViewResults.View = System.Windows.Forms.View.Tile;
@@ -78,6 +87,7 @@
             this.rbScissors.TabStop = true;
             this.rbScissors.Text = "Scissors";
             this.rbScissors.UseVisualStyleBackColor = true;
+            this.rbScissors.CheckedChanged += new System.EventHandler(this.rbScissors_CheckedChanged);
             // 
             // rbPaper
             // 
@@ -89,6 +99,7 @@
             this.rbPaper.TabStop = true;
             this.rbPaper.Text = "Paper";
             this.rbPaper.UseVisualStyleBackColor = true;
+            this.rbPaper.CheckedChanged += new System.EventHandler(this.rbPaper_CheckedChanged);
             // 
             // rbRock
             // 
@@ -104,6 +115,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblRockCursor);
+            this.panel1.Controls.Add(this.lblPaperRotation);
+            this.panel1.Controls.Add(this.cmbRockCursor);
+            this.panel1.Controls.Add(this.tbPaperRotation);
+            this.panel1.Controls.Add(this.cbScissorsFlipping);
             this.panel1.Controls.Add(this.labelPaper);
             this.panel1.Controls.Add(this.labelRock);
             this.panel1.Controls.Add(this.labelScissors);
@@ -113,9 +129,9 @@
             this.panel1.Controls.Add(this.rbPaper);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.rbRock);
-            this.panel1.Location = new System.Drawing.Point(12, 278);
+            this.panel1.Location = new System.Drawing.Point(12, 223);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(168, 180);
+            this.panel1.Size = new System.Drawing.Size(362, 180);
             this.panel1.TabIndex = 4;
             // 
             // labelPaper
@@ -185,56 +201,15 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 259);
+            this.label2.Location = new System.Drawing.Point(24, 204);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Cards You Have";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(210, 259);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 16);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Order";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // cmbOrder
-            // 
-            this.cmbOrder.FormattingEnabled = true;
-            this.cmbOrder.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9"});
-            this.cmbOrder.Location = new System.Drawing.Point(191, 278);
-            this.cmbOrder.Name = "cmbOrder";
-            this.cmbOrder.Size = new System.Drawing.Size(81, 21);
-            this.cmbOrder.TabIndex = 18;
-            this.cmbOrder.SelectedIndexChanged += new System.EventHandler(this.cmbOrder_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(213, 358);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Color";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
             // btnColor
             // 
-            this.btnColor.Location = new System.Drawing.Point(197, 379);
+            this.btnColor.Location = new System.Drawing.Point(6, 4);
             this.btnColor.Name = "btnColor";
             this.btnColor.Size = new System.Drawing.Size(75, 23);
             this.btnColor.TabIndex = 16;
@@ -244,7 +219,7 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(67, 471);
+            this.btnCreate.Location = new System.Drawing.Point(67, 447);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
             this.btnCreate.TabIndex = 20;
@@ -254,7 +229,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(253, 471);
+            this.btnUpdate.Location = new System.Drawing.Point(253, 447);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 21;
@@ -264,7 +239,7 @@
             // lblColor
             // 
             this.lblColor.AutoSize = true;
-            this.lblColor.Location = new System.Drawing.Point(213, 408);
+            this.lblColor.Location = new System.Drawing.Point(100, 9);
             this.lblColor.Name = "lblColor";
             this.lblColor.Size = new System.Drawing.Size(40, 13);
             this.lblColor.TabIndex = 22;
@@ -304,25 +279,85 @@
             this.viewHelpToolStripMenuItem.Text = "View Help";
             this.viewHelpToolStripMenuItem.Click += new System.EventHandler(this.viewHelpToolStripMenuItem_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblColor);
+            this.panel2.Controls.Add(this.btnColor);
+            this.panel2.Location = new System.Drawing.Point(105, 409);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(173, 32);
+            this.panel2.TabIndex = 24;
+            // 
+            // cbScissorsFlipping
+            // 
+            this.cbScissorsFlipping.AutoSize = true;
+            this.cbScissorsFlipping.Location = new System.Drawing.Point(196, 16);
+            this.cbScissorsFlipping.Name = "cbScissorsFlipping";
+            this.cbScissorsFlipping.Size = new System.Drawing.Size(104, 17);
+            this.cbScissorsFlipping.TabIndex = 25;
+            this.cbScissorsFlipping.Text = "Scissors Flipping";
+            this.cbScissorsFlipping.UseVisualStyleBackColor = true;
+            // 
+            // tbPaperRotation
+            // 
+            this.tbPaperRotation.LargeChange = 180;
+            this.tbPaperRotation.Location = new System.Drawing.Point(196, 132);
+            this.tbPaperRotation.Maximum = 180;
+            this.tbPaperRotation.Name = "tbPaperRotation";
+            this.tbPaperRotation.Size = new System.Drawing.Size(104, 45);
+            this.tbPaperRotation.SmallChange = 180;
+            this.tbPaperRotation.TabIndex = 26;
+            this.tbPaperRotation.TickFrequency = 180;
+            this.tbPaperRotation.Scroll += new System.EventHandler(this.tbPaperRotation_Scroll);
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
+            // 
+            // cmbRockCursor
+            // 
+            this.cmbRockCursor.FormattingEnabled = true;
+            this.cmbRockCursor.Items.AddRange(new object[] {
+            "0 Default Cursor",
+            "1 Cross Cursor"});
+            this.cmbRockCursor.Location = new System.Drawing.Point(196, 79);
+            this.cmbRockCursor.Name = "cmbRockCursor";
+            this.cmbRockCursor.Size = new System.Drawing.Size(104, 21);
+            this.cmbRockCursor.TabIndex = 27;
+            this.cmbRockCursor.SelectedIndexChanged += new System.EventHandler(this.cmbRockCursor_SelectedIndexChanged);
+            // 
+            // lblPaperRotation
+            // 
+            this.lblPaperRotation.AutoSize = true;
+            this.lblPaperRotation.Location = new System.Drawing.Point(319, 146);
+            this.lblPaperRotation.Name = "lblPaperRotation";
+            this.lblPaperRotation.Size = new System.Drawing.Size(13, 13);
+            this.lblPaperRotation.TabIndex = 28;
+            this.lblPaperRotation.Text = "0";
+            // 
+            // lblRockCursor
+            // 
+            this.lblRockCursor.AutoSize = true;
+            this.lblRockCursor.Location = new System.Drawing.Point(306, 82);
+            this.lblRockCursor.Name = "lblRockCursor";
+            this.lblRockCursor.Size = new System.Drawing.Size(41, 13);
+            this.lblRockCursor.TabIndex = 29;
+            this.lblRockCursor.Text = "Default";
+            // 
             // CommandView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 506);
-            this.Controls.Add(this.lblColor);
+            this.ClientSize = new System.Drawing.Size(386, 478);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.btnColor);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.cmbOrder);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listViewResults);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "CommandView";
-            this.Text = "CommandView";
             this.Load += new System.EventHandler(this.CommandView_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -331,6 +366,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPaperRotation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,9 +389,6 @@
         private System.Windows.Forms.Label labelRock;
         private System.Windows.Forms.Label labelScissors;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbOrder;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnUpdate;
@@ -361,5 +397,13 @@
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewHelpToolStripMenuItem;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TrackBar tbPaperRotation;
+        private System.Windows.Forms.CheckBox cbScissorsFlipping;
+        private System.Windows.Forms.ComboBox cmbRockCursor;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label lblPaperRotation;
+        private System.Windows.Forms.Label lblRockCursor;
     }
 }

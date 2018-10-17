@@ -32,7 +32,11 @@ namespace AnimalWorldC
             elementsUIDict.Add(rbScissors, labelScissors);
             elementsUIDict.Add(rbRock, labelRock);
             elementsUIDict.Add(rbPaper, labelPaper);
-            
+
+
+            DisableAllProperties();
+
+
         }
 
         public void SetModel(MainModel model)
@@ -54,6 +58,29 @@ namespace AnimalWorldC
             }
         }
 
+        private void DisableScissorsProperty()
+        {
+            cbScissorsFlipping.Enabled = false;
+        }
+
+        private void DisableRockProperty()
+        {
+            cmbRockCursor.Enabled = false;
+        }
+
+        private void DisablePaperProperty()
+        {
+            tbPaperRotation.Enabled = false;
+        }
+
+        private void DisableAllProperties()
+        {
+            DisablePaperProperty();
+            DisableRockProperty();
+            DisableScissorsProperty();
+        }
+
+
         private void CommandView_Load(object sender, EventArgs e)
         {
             btnUpdate.Enabled = false;
@@ -67,10 +94,9 @@ namespace AnimalWorldC
 
         }
 
-        private void rbRock_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
+
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -195,6 +221,57 @@ namespace AnimalWorldC
         private void cmbOrder_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPaperRotation_Scroll(object sender, EventArgs e)
+        {
+            lblPaperRotation.Text = "" + tbPaperRotation.Value;
+        }
+
+        private void cmbRockCursor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbRockCursor.SelectedIndex == 1)
+            {
+                lblRockCursor.Text = "Cross";
+            }
+            else
+            {
+                lblRockCursor.Text = "Default";
+            }
+        }
+
+        private void rbScissors_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbScissors.Checked)
+            {
+                DisableAllProperties();
+                cbScissorsFlipping.Enabled = true;
+            }
+        }
+
+        private void rbRock_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbRock.Checked)
+            {
+                DisableAllProperties();
+                cmbRockCursor.Enabled = false;
+
+            }
+        }
+
+        private void rbPaper_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbPaper.Checked)
+            {
+                DisableAllProperties();
+                tbPaperRotation.Enabled = true;
+
+            }
         }
     }
 }
