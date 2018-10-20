@@ -13,19 +13,93 @@ namespace AnimalWorldC
     public partial class FilterView : Form, IBaseView
     {
         private MainModel model;
+        private List<PictureBox> pbs = new List<PictureBox>();
+
         public FilterView()
         {
             InitializeComponent();
+
+            pbs.Add(pb0);
+            pbs.Add(pb1);
+            pbs.Add(pb2);
+            pbs.Add(pb3);
+            pbs.Add(pb4);
+            pbs.Add(pb5);
+            pbs.Add(pb6);
+            pbs.Add(pb7);
+            pbs.Add(pb8);
+            EmptyView();
+        }       
+
+        private void EmptyView()
+        {
+            foreach (PictureBox pb in pbs)
+            {
+                pb.Image = null;
+            }
         }
+
+        private void UpdatePBs()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                if (i < model.PlayerList.Count)
+                {
+                    pbs[i].Image = model.PlayerList[i].GetImage();
+
+                    if (model.PlayerList[i].GetColor() != null)
+                    {
+                        pbs[i].BackColor = model.PlayerList[i].GetColor();
+
+                        if (model.PlayerList[i].GetType() == typeof(Rock))
+                        {
+                            Rock r = (Rock)model.PlayerList[i];
+
+                            if (r.CursorName != "Default")
+                            {
+                                pbs[i].Cursor = Cursors.Cross;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        private void UpdatePBs( int j)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                if (i < model.PlayerList.Count && model.PlayerList[i].Id == j)
+                {
+                    pbs[i].Image = model.PlayerList[i].GetImage();
+                    if (model.PlayerList[i].GetColor() != null)
+                    {
+                        pbs[i].BackColor = model.PlayerList[i].GetColor();
+                        if (model.PlayerList[i].GetType() == typeof(Rock))
+                        {
+                            Rock r = (Rock)model.PlayerList[i];
+                            if (r.CursorName != "Default")
+                            {
+                                pbs[i].Cursor = Cursors.Cross;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
         public void RefreshView()
         {
-            listViewResults.Clear();
-            foreach (Element e in model.PlayerList)
+            EmptyView();
+            if (cmbType.SelectedValue == null)
             {
-                if (cmbType.SelectedIndex == e.Id || cmbType.SelectedItem == null)
-                {
-                    listViewResults.Items.Add(e.Name + e.GetColor());
-                }
+                UpdatePBs();
+            }
+            else
+            {
+                UpdatePBs(cmbType.SelectedIndex);
             }
         }
         public void SetModel(MainModel model)

@@ -199,8 +199,6 @@ namespace AnimalWorldC
                 {
                     rock.CursorName = "Default";
                 }
-                
-                
 
                 CreatingValidation(rbRock, rock);
 
