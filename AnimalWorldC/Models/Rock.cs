@@ -13,7 +13,7 @@ namespace AnimalWorldC
         /// this is an special attribute for rock
         /// rock has special cursor
         /// </summary>
-        private bool notSpecialCursor;
+        private string cursorName;
 
         public Rock()
         {
@@ -25,12 +25,12 @@ namespace AnimalWorldC
         /// <summary>
         /// Unique setter and getter for rock only
         /// </summary>
-        public bool NotSpecialCursor
+        public string CursorName
         {
-            get { return this.notSpecialCursor; }
+            get { return this.cursorName; }
             set
             {
-                this.notSpecialCursor = value;
+                this.cursorName = value;
             }
         }
 
@@ -67,7 +67,7 @@ namespace AnimalWorldC
 
         public override string ToString()
         {
-            if (this.notSpecialCursor)
+            if (this.cursorName == "Default")
             {
                 return name + "(" + id + ")" + ", Color: " + this.GetColor() + ", using Default Cursor";
 

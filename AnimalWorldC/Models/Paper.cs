@@ -15,7 +15,7 @@ namespace AnimalWorldC
         /// </summary>
         private int rotatingDegrees;
 
-        public int Rotating180Degrees
+        public int RotatingDegrees
         {
             get { return this.rotatingDegrees; }
             set { this.rotatingDegrees = value; }

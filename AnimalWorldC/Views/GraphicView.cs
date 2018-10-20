@@ -76,7 +76,7 @@ namespace AnimalWorldC
                         {
                             Rock r = (Rock)model.PlayerList[i];
 
-                            if (!r.NotSpecialCursor)
+                            if (r.CursorName != "Default")
                             {
                                 pbs[i].Cursor = Cursors.Cross;
                             }

@@ -186,7 +186,7 @@ namespace AnimalWorldC
                 Paper paper;
                 paper = new Paper();
 
-                paper.Rotating180Degrees = (tbPaperRotation.Value) ;
+                paper.RotatingDegrees = (tbPaperRotation.Value) ;
 
                 CreatingValidation(rbPaper, paper);
 
@@ -195,7 +195,11 @@ namespace AnimalWorldC
             {
                 Rock rock;
                 rock = new Rock();
-                rock.NotSpecialCursor = cmbRockCursor.SelectedIndex == 1;
+                if (cmbRockCursor.SelectedIndex == 1)
+                {
+                    rock.CursorName = "Default";
+                }
+                
                 
 
                 CreatingValidation(rbRock, rock);
