@@ -13,12 +13,12 @@ namespace AnimalWorldC
         /// this is unique for paper
         /// papaer can be rotated
         /// </summary>
-        private bool rotating180Degrees;
+        private int rotatingDegrees;
 
-        public bool Rotating180Degrees
+        public int Rotating180Degrees
         {
-            get { return this.rotating180Degrees; }
-            set { this.rotating180Degrees = value; }
+            get { return this.rotatingDegrees; }
+            set { this.rotatingDegrees = value; }
         }
 
         public Paper()
@@ -68,7 +68,7 @@ namespace AnimalWorldC
         /// <returns></returns>
         public override Image GetImage()
         {
-            if (this.rotating180Degrees)
+            if (this.rotatingDegrees == 180)
             {
                 return  RotateMySelf(Properties.Resources.paper);
 
@@ -82,7 +82,7 @@ namespace AnimalWorldC
 
         public override string ToString()
         {
-            if (this.rotating180Degrees)
+            if (this.rotatingDegrees == 180)
             {
                 return name + "("+id+")"+ ", Color: " + this.GetColor() + ", Rotating 180 degrees";
 

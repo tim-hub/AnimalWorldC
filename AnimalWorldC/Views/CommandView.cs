@@ -186,7 +186,7 @@ namespace AnimalWorldC
                 Paper paper;
                 paper = new Paper();
 
-                paper.Rotating180Degrees = tbPaperRotation.Value == 180;
+                paper.Rotating180Degrees = (tbPaperRotation.Value) ;
 
                 CreatingValidation(rbPaper, paper);
 
