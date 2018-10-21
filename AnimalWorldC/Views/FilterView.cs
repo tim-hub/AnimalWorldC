@@ -70,35 +70,47 @@ namespace AnimalWorldC
         {
             for (int i = 0; i < 9; i++)
             {
-                if (i < model.PlayerList.Count && model.PlayerList[i].Id == j)
+                if (i < model.PlayerList.Count)
                 {
-                    pbs[i].Image = model.PlayerList[i].GetImage();
-                    if (model.PlayerList[i].GetColor() != null)
+                    if (model.PlayerList[i].Id == j)
                     {
-                        pbs[i].BackColor = model.PlayerList[i].GetColor();
-                        if (model.PlayerList[i].GetType() == typeof(Rock))
+                        pbs[i].Image = model.PlayerList[i].GetImage();
+                        if (model.PlayerList[i].GetColor() != null)
                         {
-                            Rock r = (Rock)model.PlayerList[i];
-                            if (r.CursorName != "Default")
+                            pbs[i].BackColor = model.PlayerList[i].GetColor();
+                            if (model.PlayerList[i].GetType() == typeof(Rock))
                             {
-                                pbs[i].Cursor = Cursors.Cross;
+                                Rock r = (Rock)model.PlayerList[i];
+                                if (r.CursorName != "Default")
+                                {
+                                    pbs[i].Cursor = Cursors.Cross;
+                                }
                             }
                         }
                     }
+                    else
+                    {
+                        pbs[i].Image = null;
+                        pbs[i].BackColor = SystemColors.Control;
+                    }
+                    
                 }
+
 
             }
         }
 
         public void RefreshView()
         {
-            EmptyView();
-            if (cmbType.SelectedValue == null)
+            
+            if (cmbType.SelectedIndex == -1)
             {
+                EmptyView();
                 UpdatePBs();
             }
             else
             {
+                EmptyView();
                 UpdatePBs(cmbType.SelectedIndex);
             }
         }
