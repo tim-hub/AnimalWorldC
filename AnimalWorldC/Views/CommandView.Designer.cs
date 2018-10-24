@@ -74,6 +74,7 @@
             // listViewResults
             // 
             this.listViewResults.Location = new System.Drawing.Point(12, 27);
+            this.listViewResults.MultiSelect = false;
             this.listViewResults.Name = "listViewResults";
             this.listViewResults.Size = new System.Drawing.Size(362, 165);
             this.listViewResults.TabIndex = 0;
@@ -354,7 +355,7 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 48);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // editToolStripMenuItem
@@ -362,6 +363,7 @@
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 

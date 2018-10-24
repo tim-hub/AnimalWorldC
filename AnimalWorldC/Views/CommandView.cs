@@ -302,9 +302,39 @@ namespace AnimalWorldC
             }
         }
 
+        /// <summary>
+        /// return list view index
+        /// </summary>
+        /// <returns> int index </returns>
+        private int GetSelectedIndexInListview()
+        {
+            return listViewResults.SelectedIndices[0];
+        }
+
+        private void GoToUpdateMode()
+        {
+            btnUpdate.Enabled = true;
+            btnCreate.Enabled = false;
+        }
+
+        private void GoToCreateMode()
+        {
+            btnUpdate.Enabled = false;
+            btnCreate.Enabled = true;
+        }
+
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(sender + "" + e);
+            MessageBox.Show(sender + "" + e);
+
+            GoToUpdateMode();
+            
         }
     }
 }
