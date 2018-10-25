@@ -229,8 +229,8 @@ namespace AnimalWorldC
             {
                 Scissors scissors = (Scissors) element;
                 scissors.Flipping = cbScissorsFlipping.Checked;
-                model.PlayerList[id] = scissors;
-                model.UpdateViews();
+                
+                model.UpdateTheOne(id, scissors);
 
             }
             else if (element.Id == 1)
@@ -356,6 +356,46 @@ namespace AnimalWorldC
             return listViewResults.SelectedIndices[0];
         }
 
+        private Element GetSelectedElement(int i)
+        {
+            return model.PlayerList[i];
+        }
+
+        private RadioButton GetRadioButtonOfTheElement(int i)
+        {
+            Element element = GetSelectedElement(i);
+            if (element.Id == 0)
+            {
+                return rbScissors;
+            }else if (element.Id == 1)
+            {
+                return rbRock;
+            }
+            else if (element.Id ==2)
+            {
+                return rbPaper;
+            }
+            return null;
+        }
+
+        private Label GetLabelOfTheElement(int i)
+        {
+            Element element = GetSelectedElement(i);
+            if (element.Id == 0)
+            {
+                return labelScissors;
+            }
+            else if (element.Id == 1)
+            {
+                return labelRock;
+            }
+            else if (element.Id == 2)
+            {
+                return labelPaper;
+            }
+            return null;
+        }
+
         private void GoToUpdateMode()
         {
             btnUpdate.Enabled = true;
@@ -407,6 +447,44 @@ namespace AnimalWorldC
         {
             UpdateTheOne();
             GoToCreateMode();
+        }
+
+        private void GoToDelete(int i, Label lbl)
+        {
+
+            DialogResult result = MessageBox.Show("Are you sure to delete this one?", "Confirmation", MessageBoxButtons.YesNoCancel);
+
+            if (result == DialogResult.Yes)
+            {
+                int j = -1;
+                Int32.TryParse(lbl.Text, out j);
+                j = j + 1;
+                if (j >= 0 && j <= 2)
+                {
+                    model.RemoveById(i);
+                    lbl.Text = "" + (j);
+                }
+                else
+                {
+                    lbl.Enabled = false;
+                }
+
+                if (!lbl.Enabled)
+                {
+                    lbl.Enabled = true;
+                }
+
+            }
+            else
+            {
+                //...
+            }
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int i = GetSelectedIndexInListview();
+            GoToDelete(i, GetLabelOfTheElement(i));
         }
     }
 }

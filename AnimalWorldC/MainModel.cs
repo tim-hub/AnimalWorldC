@@ -53,11 +53,23 @@ namespace AnimalWorldC
             UpdateViews();
         }
 
+        public void UpdateTheOne(int i, Element element)
+        {
+            this.playerList[i] = element;
+            UpdateViews();
+        }
+
         public void RemoveOne(Element element)
         {
             this.playerList.Remove(element);
             UpdateViews();
         } 
+
+       public void RemoveById(int i)
+        {
+            this.playerList.RemoveAt(i);
+            UpdateViews();
+        }
     }
 
     
