@@ -199,7 +199,6 @@ namespace AnimalWorldC
                 {
                     rock.CursorName = "Default";
                 }
-
                 CreatingValidation(rbRock, rock);
 
             }
@@ -213,6 +212,37 @@ namespace AnimalWorldC
 
             }
 
+        }
+
+        private void UpdateTheOne()
+        {
+            int id =  GetSelectedIndexInListview();
+            Element element = model.PlayerList[id];
+
+            // color is the common attribute
+            if (MyDialog.Color != null)
+            {
+                element.SetColor(MyDialog.Color);
+            }
+
+            if (element.Id == 0)
+            {
+                Scissors scissors = (Scissors) element;
+                scissors.Flipping = cbScissorsFlipping.Checked;
+                model.PlayerList[id] = scissors;
+                model.UpdateViews();
+
+            }
+            else if (element.Id == 1)
+            {
+
+            }
+            else
+            {
+
+            }
+
+            
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -262,7 +292,7 @@ namespace AnimalWorldC
             }
         }
 
-        private void rbScissors_CheckedChanged(object sender, EventArgs e)
+        private void RbScissorsChecked()
         {
             if (rbScissors.Checked)
             {
@@ -271,7 +301,12 @@ namespace AnimalWorldC
             }
         }
 
-        private void rbRock_CheckedChanged(object sender, EventArgs e)
+        private void rbScissors_CheckedChanged(object sender, EventArgs e)
+        {
+            RbScissorsChecked();
+        }
+
+        private void RbRockChecked()
         {
             if (rbRock.Checked)
             {
@@ -281,7 +316,12 @@ namespace AnimalWorldC
             }
         }
 
-        private void rbPaper_CheckedChanged(object sender, EventArgs e)
+        private void rbRock_CheckedChanged(object sender, EventArgs e)
+        {
+            RbRockChecked();
+        }
+
+        private void RbPaperChecked()
         {
             if (rbPaper.Checked)
             {
@@ -289,6 +329,11 @@ namespace AnimalWorldC
                 tbPaperRotation.Enabled = true;
 
             }
+        }
+
+        private void rbPaper_CheckedChanged(object sender, EventArgs e)
+        {
+            RbPaperChecked();
         }
 
         private void listViewResults_MouseClick(object sender, MouseEventArgs e)
@@ -315,6 +360,27 @@ namespace AnimalWorldC
         {
             btnUpdate.Enabled = true;
             btnCreate.Enabled = false;
+
+            int i = GetSelectedIndexInListview();
+            int id = model.PlayerList[i].Id;
+
+            if ( id == 0)
+            {
+                rbScissors.Checked = true;
+                RbScissorsChecked();
+            }
+            else if (id == 1)
+            {
+                rbRock.Checked = true;
+                RbRockChecked();
+            }
+            else
+            {
+                rbPaper.Checked = true;
+                RbPaperChecked();
+            }
+
+
         }
 
         private void GoToCreateMode()
@@ -331,10 +397,16 @@ namespace AnimalWorldC
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Console.WriteLine(sender + "" + e);
-            MessageBox.Show(sender + "" + e);
+            //MessageBox.Show(sender + "" + e);
 
             GoToUpdateMode();
             
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateTheOne();
+            GoToCreateMode();
         }
     }
 }
