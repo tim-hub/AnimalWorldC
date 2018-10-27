@@ -15,6 +15,15 @@ namespace AnimalWorldC
     {
         private MainModel model;
         private ColorDialog MyDialog = new ColorDialog();
+
+        private int scissorsCount = 0;
+        private int rockCount = 0;
+        private int paperCount = 0;
+
+        public const int ScissorsLimit = 3;
+        public const int RockLimit = 3;
+        public const int PaperLimit = 3;
+
         public Views.RulesForm ruleForm;
 
         private Dictionary<RadioButton, Label> elementsUIDict;
@@ -44,18 +53,45 @@ namespace AnimalWorldC
             this.model = model;
         }
 
+
+
+
         /// <summary>
         /// This method can be called through controller.
         /// </summary>
 
         public void RefreshView()
         {
+            scissorsCount = 0;
+            rockCount = 0;
+            paperCount = 0;
+
             
             listViewResults.Clear();
             foreach (Element e in model.PlayerList)
             {
                 listViewResults.Items.Add(e.ToString());
+                if (e.Id == 0)
+                {
+                    scissorsCount++;
+                }else if (e.Id == 1)
+                {
+                    rockCount++;
+                }
+                else
+                {
+                    paperCount++;
+                }
+
+                UpdateLabelCount();
             }
+        }
+
+        private void UpdateLabelCount()
+        {
+            labelScissors.Text = (ScissorsLimit - scissorsCount).ToString();
+            labelRock.Text = (RockLimit - rockCount).ToString();
+            labelPaper.Text = (PaperLimit - paperCount).ToString();
         }
 
         private void DisableScissorsProperty()
@@ -146,6 +182,7 @@ namespace AnimalWorldC
 
         private void CreatingValidation(RadioButton rb, Element element)
         {
+
             int j = 0;
             if (Int32.TryParse( elementsUIDict[rb].Text, out j))
             {
@@ -159,7 +196,8 @@ namespace AnimalWorldC
                     }
 
                     model.AddOne(element);
-                    elementsUIDict[rb].Text = (j ).ToString();
+                    
+                    
 
                     if (j == 0)
                     {
@@ -235,11 +273,22 @@ namespace AnimalWorldC
             }
             else if (element.Id == 1)
             {
+                Rock rock = (Rock)element;
+                if (cmbRockCursor.SelectedIndex == 1)
+                {
+                    rock.CursorName = "Default";
+                }
+               
+
+                model.UpdateTheOne(id, rock);
 
             }
             else
             {
+                Paper paper = (Paper)element;
+                paper.RotatingDegrees = tbPaperRotation.Value;
 
+                model.UpdateTheOne(id, paper);
             }
 
             
@@ -449,10 +498,12 @@ namespace AnimalWorldC
             GoToCreateMode();
         }
 
+
+
         private void GoToDelete(int i, Label lbl)
         {
 
-            DialogResult result = MessageBox.Show("Are you sure to delete this one?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            DialogResult result = MessageBox.Show("Are you sure to delete this one?", "Confirmation", MessageBoxButtons.YesNo);
 
             if (result == DialogResult.Yes)
             {
@@ -478,6 +529,7 @@ namespace AnimalWorldC
             else
             {
                 //...
+                Console.WriteLine("Stop deleting");
             }
         }
 
