@@ -16,6 +16,8 @@ namespace AnimalWorldC
         private List<PictureBox> pbs = new List<PictureBox>();
         private List<PictureBox> pbs_ai = new List<PictureBox>();
 
+        private int pbSelected = -1;
+
         public GraphicView()
         {
             InitializeComponent();
@@ -119,6 +121,65 @@ namespace AnimalWorldC
         private void GraphicView_Load(object sender, EventArgs e)
         {
             EmptyView();
+        }
+
+        private void pb0_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pb0_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GoToDelete(int i)
+        {
+
+            DialogResult result = MessageBox.Show("Are you sure to delete this one?", "Confirmation", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                
+                    model.RemoveById(i);
+
+
+            }
+            else
+            {
+                //...
+                Console.WriteLine("Stop deleting");
+            }
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pb0_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (pb0.Bounds.Contains(e.Location))
+                {
+                    pbSelected = 0;
+                    Console.WriteLine("Right click on picture box 0");
+                    contextMenuStrip1.Show(Cursor.Position);
+                }
+            }
         }
     }
 }

@@ -28,15 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pb2 = new System.Windows.Forms.PictureBox();
-            this.pb1 = new System.Windows.Forms.PictureBox();
-            this.pb0 = new System.Windows.Forms.PictureBox();
-            this.pb4 = new System.Windows.Forms.PictureBox();
-            this.pb5 = new System.Windows.Forms.PictureBox();
-            this.pb6 = new System.Windows.Forms.PictureBox();
-            this.pb7 = new System.Windows.Forms.PictureBox();
-            this.pb8 = new System.Windows.Forms.PictureBox();
+            this.ai2 = new System.Windows.Forms.PictureBox();
+            this.pb3 = new System.Windows.Forms.PictureBox();
             this.ai8 = new System.Windows.Forms.PictureBox();
             this.ai7 = new System.Windows.Forms.PictureBox();
             this.ai6 = new System.Windows.Forms.PictureBox();
@@ -45,17 +40,20 @@
             this.ai3 = new System.Windows.Forms.PictureBox();
             this.ai1 = new System.Windows.Forms.PictureBox();
             this.ai0 = new System.Windows.Forms.PictureBox();
-            this.pb3 = new System.Windows.Forms.PictureBox();
-            this.ai2 = new System.Windows.Forms.PictureBox();
+            this.pb8 = new System.Windows.Forms.PictureBox();
+            this.pb7 = new System.Windows.Forms.PictureBox();
+            this.pb6 = new System.Windows.Forms.PictureBox();
+            this.pb5 = new System.Windows.Forms.PictureBox();
+            this.pb4 = new System.Windows.Forms.PictureBox();
+            this.pb2 = new System.Windows.Forms.PictureBox();
+            this.pb1 = new System.Windows.Forms.PictureBox();
+            this.pb0 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ai2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ai8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ai7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ai6)).BeginInit();
@@ -64,8 +62,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.ai3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ai1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ai0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ai2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb0)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,101 +100,29 @@
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pb2
+            // ai2
             // 
-            this.pb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb2.Image = global::AnimalWorldC.Properties.Resources.paper;
-            this.pb2.InitialImage = null;
-            this.pb2.Location = new System.Drawing.Point(115, 367);
-            this.pb2.Name = "pb2";
-            this.pb2.Size = new System.Drawing.Size(50, 50);
-            this.pb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb2.TabIndex = 8;
-            this.pb2.TabStop = false;
-            this.pb2.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.ai2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ai2.Image = global::AnimalWorldC.Properties.Resources.paper;
+            this.ai2.InitialImage = null;
+            this.ai2.Location = new System.Drawing.Point(115, 3);
+            this.ai2.Name = "ai2";
+            this.ai2.Size = new System.Drawing.Size(50, 50);
+            this.ai2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ai2.TabIndex = 25;
+            this.ai2.TabStop = false;
             // 
-            // pb1
+            // pb3
             // 
-            this.pb1.Image = global::AnimalWorldC.Properties.Resources.rock;
-            this.pb1.InitialImage = null;
-            this.pb1.Location = new System.Drawing.Point(59, 367);
-            this.pb1.Name = "pb1";
-            this.pb1.Size = new System.Drawing.Size(50, 50);
-            this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb1.TabIndex = 9;
-            this.pb1.TabStop = false;
-            // 
-            // pb0
-            // 
-            this.pb0.Image = global::AnimalWorldC.Properties.Resources.scissors;
-            this.pb0.InitialImage = null;
-            this.pb0.Location = new System.Drawing.Point(3, 367);
-            this.pb0.Name = "pb0";
-            this.pb0.Size = new System.Drawing.Size(50, 50);
-            this.pb0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb0.TabIndex = 10;
-            this.pb0.TabStop = false;
-            // 
-            // pb4
-            // 
-            this.pb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb4.Image = global::AnimalWorldC.Properties.Resources.paper;
-            this.pb4.InitialImage = null;
-            this.pb4.Location = new System.Drawing.Point(227, 367);
-            this.pb4.Name = "pb4";
-            this.pb4.Size = new System.Drawing.Size(50, 50);
-            this.pb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb4.TabIndex = 11;
-            this.pb4.TabStop = false;
-            // 
-            // pb5
-            // 
-            this.pb5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb5.Image = global::AnimalWorldC.Properties.Resources.paper;
-            this.pb5.InitialImage = null;
-            this.pb5.Location = new System.Drawing.Point(283, 367);
-            this.pb5.Name = "pb5";
-            this.pb5.Size = new System.Drawing.Size(50, 50);
-            this.pb5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb5.TabIndex = 12;
-            this.pb5.TabStop = false;
-            // 
-            // pb6
-            // 
-            this.pb6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb6.Image = global::AnimalWorldC.Properties.Resources.paper;
-            this.pb6.InitialImage = null;
-            this.pb6.Location = new System.Drawing.Point(339, 367);
-            this.pb6.Name = "pb6";
-            this.pb6.Size = new System.Drawing.Size(50, 50);
-            this.pb6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb6.TabIndex = 13;
-            this.pb6.TabStop = false;
-            // 
-            // pb7
-            // 
-            this.pb7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb7.Image = global::AnimalWorldC.Properties.Resources.paper;
-            this.pb7.InitialImage = null;
-            this.pb7.Location = new System.Drawing.Point(395, 367);
-            this.pb7.Name = "pb7";
-            this.pb7.Size = new System.Drawing.Size(50, 50);
-            this.pb7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb7.TabIndex = 14;
-            this.pb7.TabStop = false;
-            this.pb7.Click += new System.EventHandler(this.pb7_Click);
-            // 
-            // pb8
-            // 
-            this.pb8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb8.Image = global::AnimalWorldC.Properties.Resources.paper;
-            this.pb8.InitialImage = null;
-            this.pb8.Location = new System.Drawing.Point(451, 367);
-            this.pb8.Name = "pb8";
-            this.pb8.Size = new System.Drawing.Size(50, 50);
-            this.pb8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb8.TabIndex = 15;
-            this.pb8.TabStop = false;
+            this.pb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb3.Image = global::AnimalWorldC.Properties.Resources.paper;
+            this.pb3.InitialImage = null;
+            this.pb3.Location = new System.Drawing.Point(171, 367);
+            this.pb3.Name = "pb3";
+            this.pb3.Size = new System.Drawing.Size(50, 50);
+            this.pb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb3.TabIndex = 24;
+            this.pb3.TabStop = false;
             // 
             // ai8
             // 
@@ -285,29 +218,127 @@
             this.ai0.TabIndex = 18;
             this.ai0.TabStop = false;
             // 
-            // pb3
+            // pb8
             // 
-            this.pb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb3.Image = global::AnimalWorldC.Properties.Resources.paper;
-            this.pb3.InitialImage = null;
-            this.pb3.Location = new System.Drawing.Point(171, 367);
-            this.pb3.Name = "pb3";
-            this.pb3.Size = new System.Drawing.Size(50, 50);
-            this.pb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb3.TabIndex = 24;
-            this.pb3.TabStop = false;
+            this.pb8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb8.Image = global::AnimalWorldC.Properties.Resources.paper;
+            this.pb8.InitialImage = null;
+            this.pb8.Location = new System.Drawing.Point(451, 367);
+            this.pb8.Name = "pb8";
+            this.pb8.Size = new System.Drawing.Size(50, 50);
+            this.pb8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb8.TabIndex = 15;
+            this.pb8.TabStop = false;
             // 
-            // ai2
+            // pb7
             // 
-            this.ai2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ai2.Image = global::AnimalWorldC.Properties.Resources.paper;
-            this.ai2.InitialImage = null;
-            this.ai2.Location = new System.Drawing.Point(115, 3);
-            this.ai2.Name = "ai2";
-            this.ai2.Size = new System.Drawing.Size(50, 50);
-            this.ai2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ai2.TabIndex = 25;
-            this.ai2.TabStop = false;
+            this.pb7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb7.Image = global::AnimalWorldC.Properties.Resources.paper;
+            this.pb7.InitialImage = null;
+            this.pb7.Location = new System.Drawing.Point(395, 367);
+            this.pb7.Name = "pb7";
+            this.pb7.Size = new System.Drawing.Size(50, 50);
+            this.pb7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb7.TabIndex = 14;
+            this.pb7.TabStop = false;
+            this.pb7.Click += new System.EventHandler(this.pb7_Click);
+            // 
+            // pb6
+            // 
+            this.pb6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb6.Image = global::AnimalWorldC.Properties.Resources.paper;
+            this.pb6.InitialImage = null;
+            this.pb6.Location = new System.Drawing.Point(339, 367);
+            this.pb6.Name = "pb6";
+            this.pb6.Size = new System.Drawing.Size(50, 50);
+            this.pb6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb6.TabIndex = 13;
+            this.pb6.TabStop = false;
+            // 
+            // pb5
+            // 
+            this.pb5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb5.Image = global::AnimalWorldC.Properties.Resources.paper;
+            this.pb5.InitialImage = null;
+            this.pb5.Location = new System.Drawing.Point(283, 367);
+            this.pb5.Name = "pb5";
+            this.pb5.Size = new System.Drawing.Size(50, 50);
+            this.pb5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb5.TabIndex = 12;
+            this.pb5.TabStop = false;
+            // 
+            // pb4
+            // 
+            this.pb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb4.Image = global::AnimalWorldC.Properties.Resources.paper;
+            this.pb4.InitialImage = null;
+            this.pb4.Location = new System.Drawing.Point(227, 367);
+            this.pb4.Name = "pb4";
+            this.pb4.Size = new System.Drawing.Size(50, 50);
+            this.pb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb4.TabIndex = 11;
+            this.pb4.TabStop = false;
+            // 
+            // pb2
+            // 
+            this.pb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb2.Image = global::AnimalWorldC.Properties.Resources.paper;
+            this.pb2.InitialImage = null;
+            this.pb2.Location = new System.Drawing.Point(115, 367);
+            this.pb2.Name = "pb2";
+            this.pb2.Size = new System.Drawing.Size(50, 50);
+            this.pb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb2.TabIndex = 8;
+            this.pb2.TabStop = false;
+            this.pb2.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // pb1
+            // 
+            this.pb1.Image = global::AnimalWorldC.Properties.Resources.rock;
+            this.pb1.InitialImage = null;
+            this.pb1.Location = new System.Drawing.Point(59, 367);
+            this.pb1.Name = "pb1";
+            this.pb1.Size = new System.Drawing.Size(50, 50);
+            this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb1.TabIndex = 9;
+            this.pb1.TabStop = false;
+            // 
+            // pb0
+            // 
+            this.pb0.Image = global::AnimalWorldC.Properties.Resources.scissors;
+            this.pb0.InitialImage = null;
+            this.pb0.Location = new System.Drawing.Point(3, 367);
+            this.pb0.Name = "pb0";
+            this.pb0.Size = new System.Drawing.Size(50, 50);
+            this.pb0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb0.TabIndex = 10;
+            this.pb0.TabStop = false;
+            this.pb0.Click += new System.EventHandler(this.pb0_Click);
+            this.pb0.DoubleClick += new System.EventHandler(this.pb0_DoubleClick);
+            this.pb0.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb0_MouseClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // GraphicView
             // 
@@ -319,14 +350,8 @@
             this.Text = "GraphicView";
             this.Load += new System.EventHandler(this.GraphicView_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ai2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ai8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ai7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ai6)).EndInit();
@@ -335,8 +360,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.ai3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ai1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ai0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ai2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb0)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -361,5 +393,8 @@
         private System.Windows.Forms.PictureBox ai0;
         private System.Windows.Forms.PictureBox ai2;
         private System.Windows.Forms.PictureBox pb3;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
