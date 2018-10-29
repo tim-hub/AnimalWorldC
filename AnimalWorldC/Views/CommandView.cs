@@ -538,5 +538,10 @@ namespace AnimalWorldC
             int i = GetSelectedIndexInListview();
             GoToDelete(i, GetLabelOfTheElement(i));
         }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

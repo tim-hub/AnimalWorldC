@@ -68,6 +68,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ai2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
@@ -131,6 +132,7 @@
             this.pb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb3.TabIndex = 24;
             this.pb3.TabStop = false;
+            this.pb3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb3_MouseClick);
             // 
             // ai8
             // 
@@ -237,6 +239,7 @@
             this.pb8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb8.TabIndex = 15;
             this.pb8.TabStop = false;
+            this.pb8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb8_MouseClick);
             // 
             // pb7
             // 
@@ -250,6 +253,7 @@
             this.pb7.TabIndex = 14;
             this.pb7.TabStop = false;
             this.pb7.Click += new System.EventHandler(this.pb7_Click);
+            this.pb7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb7_MouseClick);
             // 
             // pb6
             // 
@@ -262,6 +266,7 @@
             this.pb6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb6.TabIndex = 13;
             this.pb6.TabStop = false;
+            this.pb6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb6_MouseClick);
             // 
             // pb5
             // 
@@ -274,6 +279,7 @@
             this.pb5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb5.TabIndex = 12;
             this.pb5.TabStop = false;
+            this.pb5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb5_MouseClick);
             // 
             // pb4
             // 
@@ -286,6 +292,8 @@
             this.pb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb4.TabIndex = 11;
             this.pb4.TabStop = false;
+            this.pb4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb4_MouseClick);
+            this.pb4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.pb4_MouseDoubleClick);
             // 
             // pb2
             // 
@@ -299,6 +307,7 @@
             this.pb2.TabIndex = 8;
             this.pb2.TabStop = false;
             this.pb2.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.pb2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb2_MouseClick);
             // 
             // pb1
             // 
@@ -546,11 +555,22 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "The Player\'s";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(313, 257);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(186, 13);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Right click on picture box to update it.";
+            // 
             // GraphicView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 461);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label1);
@@ -634,5 +654,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
