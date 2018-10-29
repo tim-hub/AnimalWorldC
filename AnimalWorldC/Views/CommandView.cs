@@ -469,11 +469,18 @@ namespace AnimalWorldC
                 RbPaperChecked();
             }
 
+            rbScissors.Enabled = false;
+            rbRock.Enabled = false;
+            rbPaper.Enabled = false;
+
 
         }
 
         private void GoToCreateMode()
         {
+            rbScissors.Enabled = true;
+            rbRock.Enabled = true;
+            rbPaper.Enabled = true;
             btnUpdate.Enabled = false;
             btnCreate.Enabled = true;
         }
