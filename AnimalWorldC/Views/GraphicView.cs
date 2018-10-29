@@ -317,6 +317,10 @@ namespace AnimalWorldC
             }
 
         }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void pb0_MouseClick(object sender, MouseEventArgs e)
         {
@@ -330,6 +334,53 @@ namespace AnimalWorldC
             ShowRightClickMenu(pbSelected, e);
         }
 
-        
+
+
+        private void pb2_MouseClick(object sender, MouseEventArgs e)
+        {
+            pbSelected = 2;
+            ShowRightClickMenu(pbSelected, e);
+        }
+
+        private void pb3_MouseClick(object sender, MouseEventArgs e)
+        {
+            pbSelected = 3;
+            ShowRightClickMenu(pbSelected, e);
+        }
+
+        private void pb4_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pb4_MouseClick(object sender, MouseEventArgs e)
+        {
+            pbSelected = 4;
+            ShowRightClickMenu(pbSelected, e);
+        }
+
+        private void pb5_MouseClick(object sender, MouseEventArgs e)
+        {
+            pbSelected = 5;
+            ShowRightClickMenu(pbSelected, e);
+        }
+
+        private void pb6_MouseClick(object sender, MouseEventArgs e)
+        {
+            pbSelected = 6;
+            ShowRightClickMenu(pbSelected, e);
+        }
+
+        private void pb7_MouseClick(object sender, MouseEventArgs e)
+        {
+            pbSelected = 7;
+            ShowRightClickMenu(pbSelected, e);
+        }
+
+        private void pb8_MouseClick(object sender, MouseEventArgs e)
+        {
+            pbSelected = 8;
+            ShowRightClickMenu(pbSelected, e);
+        }
     }
 }
