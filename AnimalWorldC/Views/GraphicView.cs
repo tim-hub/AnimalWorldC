@@ -12,6 +12,7 @@ namespace AnimalWorldC
 {
     public partial class GraphicView : Form, IBaseView
     {
+        private ColorDialog MyDialog = new ColorDialog();
         private MainModel model;
         private List<PictureBox> pbs = new List<PictureBox>();
         private List<PictureBox> pbs_ai = new List<PictureBox>();
@@ -167,9 +168,104 @@ namespace AnimalWorldC
 
         }
 
-        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        private void UpdateTheElement(int i)
+        {
+            if (i >= 0 && i < model.PlayerList.Count)
+            {
+                
+                Element element = model.PlayerList[i];
+
+                // color is the common attribute
+                if (MyDialog.Color != null)
+                {
+                    element.SetColor(MyDialog.Color);
+                }
+
+                if (element.Id == 0)
+                {
+                    Scissors scissors = (Scissors)element;
+                    scissors.Flipping = cbScissorsFlipping.Checked;
+
+                    model.UpdateTheOne(i, scissors);
+
+                }
+                else if (element.Id == 1)
+                {
+                    Rock rock = (Rock)element;
+                    if (cmbRockCursor.SelectedIndex == 1)
+                    {
+                        rock.CursorName = "Default";
+                    }
+
+
+                    model.UpdateTheOne(i, rock);
+
+                }
+                else
+                {
+                    Paper paper = (Paper)element;
+                    paper.RotatingDegrees = tbPaperRotation.Value;
+
+                    model.UpdateTheOne(i, paper);
+                }
+            }
+
+
+            // reset the picture box selected
+            pbSelected = -1;
+            DisableAllProperties();
+        }
+
+
+
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
 
+            UpdateTheElement(pbSelected);
+        }
+
+        private void btnColor_Click(object sender, EventArgs e)
+        {
+            // Keeps the user from selecting a custom color.
+            MyDialog.AllowFullOpen = false;
+            // Allows the user to get help. (The default is false.)
+            MyDialog.ShowHelp = true;
+            // Sets the initial color select to the current text color.
+            MyDialog.Color = lblColor.BackColor;
+
+
+            // Update the text box color if the user clicks OK 
+            if (MyDialog.ShowDialog() == DialogResult.OK)
+                lblColor.BackColor = MyDialog.Color;
+        }
+
+        private void GoToUpdateMode(int i)
+        {
+            // get the element from model
+            Element e = model.PlayerList[i];
+
+            if (e.Id == 0)
+            {
+                cbScissorsFlipping.Enabled = true;
+            }else if (e.Id ==1) {
+                cmbRockCursor.Enabled = true;
+            }
+            else
+            {
+                tbPaperRotation.Enabled = true;
+            }
+
+            btnColor.Enabled = true;
+            btnUpdate.Enabled = true;
+
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (pbSelected != -1)
+            {
+                GoToUpdateMode(pbSelected);
+            }
         }
 
         private void GoToDelete(int i)
@@ -186,6 +282,8 @@ namespace AnimalWorldC
                 //...
                 Console.WriteLine("Stop deleting");
             }
+
+            pbSelected = -1;
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -205,6 +303,9 @@ namespace AnimalWorldC
         {
             if (e.Button == MouseButtons.Right)
             {
+                // disable all properties, then enable them for spercific component
+                DisableAllProperties();
+
                 Console.WriteLine("Right click on picture box " + selected);
 
                 if (selected < model.PlayerList.Count)
@@ -228,5 +329,7 @@ namespace AnimalWorldC
             pbSelected = 1;
             ShowRightClickMenu(pbSelected, e);
         }
+
+        
     }
 }
