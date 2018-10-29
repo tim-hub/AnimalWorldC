@@ -43,8 +43,34 @@ namespace AnimalWorldC
             pbs_ai.Add(ai8);
 
 
-            
 
+            DisableAllProperties();
+        }
+
+
+        private void DisableScissorsProperty()
+        {
+            cbScissorsFlipping.Enabled = false;
+        }
+
+        private void DisableRockProperty()
+        {
+            cmbRockCursor.Enabled = false;
+        }
+
+        private void DisablePaperProperty()
+        {
+            tbPaperRotation.Enabled = false;
+        }
+
+        private void DisableAllProperties()
+        {
+            DisablePaperProperty();
+            DisableRockProperty();
+            DisableScissorsProperty();
+
+            btnColor.Enabled = false;
+            btnUpdate.Enabled = false;
         }
 
         private void EmptyView()
@@ -52,11 +78,13 @@ namespace AnimalWorldC
             foreach (PictureBox pb in pbs)
             {
                 pb.Image = null;
+                pb.BackColor = Color.BurlyWood;
             }
 
             foreach (PictureBox pb in pbs_ai)
             {
                 pb.Image = null;
+                pb.BackColor = Color.BurlyWood;
             }
         }
 
@@ -84,8 +112,7 @@ namespace AnimalWorldC
                             }
                             
                         }
-
-                        
+  
                     }
                 }
                 
@@ -152,10 +179,7 @@ namespace AnimalWorldC
 
             if (result == DialogResult.Yes)
             {
-                
                     model.RemoveById(i);
-
-
             }
             else
             {
@@ -166,20 +190,43 @@ namespace AnimalWorldC
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (pbSelected != -1)
+            {
+                GoToDelete(pbSelected);
+            }
+        }
+
+        /// <summary>
+        /// selected is the index of the picture box
+        /// </summary>
+        /// <param name="selected"></param>
+        /// <param name="e"></param>
+        private void ShowRightClickMenu(int selected, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                Console.WriteLine("Right click on picture box " + selected);
+
+                if (selected < model.PlayerList.Count)
+                {
+                    contextMenuStrip1.Show(Cursor.Position);
+                }
+
+
+            }
 
         }
 
         private void pb0_MouseClick(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
-            {
-                if (pb0.Bounds.Contains(e.Location))
-                {
-                    pbSelected = 0;
-                    Console.WriteLine("Right click on picture box 0");
-                    contextMenuStrip1.Show(Cursor.Position);
-                }
-            }
+            pbSelected = 0;
+            ShowRightClickMenu(pbSelected, e);
+        }
+
+        private void pb1_MouseClick(object sender, MouseEventArgs e)
+        {
+            pbSelected = 1;
+            ShowRightClickMenu(pbSelected, e);
         }
     }
 }

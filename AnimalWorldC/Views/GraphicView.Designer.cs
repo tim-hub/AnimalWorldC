@@ -51,6 +51,19 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblColor = new System.Windows.Forms.Label();
+            this.btnColor = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblRockCursor = new System.Windows.Forms.Label();
+            this.lblPaperRotation = new System.Windows.Forms.Label();
+            this.cmbRockCursor = new System.Windows.Forms.ComboBox();
+            this.tbPaperRotation = new System.Windows.Forms.TrackBar();
+            this.cbScissorsFlipping = new System.Windows.Forms.CheckBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ai2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
@@ -71,6 +84,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb0)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPaperRotation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,7 +115,7 @@
             this.panel1.Controls.Add(this.pb0);
             this.panel1.Location = new System.Drawing.Point(12, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(510, 420);
+            this.panel1.Size = new System.Drawing.Size(510, 235);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -117,7 +136,7 @@
             this.pb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb3.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb3.InitialImage = null;
-            this.pb3.Location = new System.Drawing.Point(171, 367);
+            this.pb3.Location = new System.Drawing.Point(171, 180);
             this.pb3.Name = "pb3";
             this.pb3.Size = new System.Drawing.Size(50, 50);
             this.pb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -223,7 +242,7 @@
             this.pb8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb8.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb8.InitialImage = null;
-            this.pb8.Location = new System.Drawing.Point(451, 367);
+            this.pb8.Location = new System.Drawing.Point(451, 180);
             this.pb8.Name = "pb8";
             this.pb8.Size = new System.Drawing.Size(50, 50);
             this.pb8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -235,7 +254,7 @@
             this.pb7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb7.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb7.InitialImage = null;
-            this.pb7.Location = new System.Drawing.Point(395, 367);
+            this.pb7.Location = new System.Drawing.Point(395, 180);
             this.pb7.Name = "pb7";
             this.pb7.Size = new System.Drawing.Size(50, 50);
             this.pb7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -248,7 +267,7 @@
             this.pb6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb6.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb6.InitialImage = null;
-            this.pb6.Location = new System.Drawing.Point(339, 367);
+            this.pb6.Location = new System.Drawing.Point(339, 180);
             this.pb6.Name = "pb6";
             this.pb6.Size = new System.Drawing.Size(50, 50);
             this.pb6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -260,7 +279,7 @@
             this.pb5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb5.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb5.InitialImage = null;
-            this.pb5.Location = new System.Drawing.Point(283, 367);
+            this.pb5.Location = new System.Drawing.Point(283, 180);
             this.pb5.Name = "pb5";
             this.pb5.Size = new System.Drawing.Size(50, 50);
             this.pb5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -272,7 +291,7 @@
             this.pb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb4.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb4.InitialImage = null;
-            this.pb4.Location = new System.Drawing.Point(227, 367);
+            this.pb4.Location = new System.Drawing.Point(227, 180);
             this.pb4.Name = "pb4";
             this.pb4.Size = new System.Drawing.Size(50, 50);
             this.pb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -284,7 +303,7 @@
             this.pb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb2.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb2.InitialImage = null;
-            this.pb2.Location = new System.Drawing.Point(115, 367);
+            this.pb2.Location = new System.Drawing.Point(115, 180);
             this.pb2.Name = "pb2";
             this.pb2.Size = new System.Drawing.Size(50, 50);
             this.pb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -296,18 +315,19 @@
             // 
             this.pb1.Image = global::AnimalWorldC.Properties.Resources.rock;
             this.pb1.InitialImage = null;
-            this.pb1.Location = new System.Drawing.Point(59, 367);
+            this.pb1.Location = new System.Drawing.Point(59, 180);
             this.pb1.Name = "pb1";
             this.pb1.Size = new System.Drawing.Size(50, 50);
             this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb1.TabIndex = 9;
             this.pb1.TabStop = false;
+            this.pb1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pb1_MouseClick);
             // 
             // pb0
             // 
             this.pb0.Image = global::AnimalWorldC.Properties.Resources.scissors;
             this.pb0.InitialImage = null;
-            this.pb0.Location = new System.Drawing.Point(3, 367);
+            this.pb0.Location = new System.Drawing.Point(3, 180);
             this.pb0.Name = "pb0";
             this.pb0.Size = new System.Drawing.Size(50, 50);
             this.pb0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -323,28 +343,169 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 48);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblColor);
+            this.panel2.Controls.Add(this.btnColor);
+            this.panel2.Location = new System.Drawing.Point(219, 73);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(140, 32);
+            this.panel2.TabIndex = 27;
+            // 
+            // lblColor
+            // 
+            this.lblColor.AutoSize = true;
+            this.lblColor.Location = new System.Drawing.Point(91, 9);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(40, 13);
+            this.lblColor.TabIndex = 22;
+            this.lblColor.Text = "           ";
+            // 
+            // btnColor
+            // 
+            this.btnColor.Location = new System.Drawing.Point(6, 4);
+            this.btnColor.Name = "btnColor";
+            this.btnColor.Size = new System.Drawing.Size(75, 23);
+            this.btnColor.TabIndex = 16;
+            this.btnColor.Text = "PickColor";
+            this.btnColor.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(423, 76);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 26;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblRockCursor);
+            this.panel3.Controls.Add(this.btnUpdate);
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Controls.Add(this.lblPaperRotation);
+            this.panel3.Controls.Add(this.cmbRockCursor);
+            this.panel3.Controls.Add(this.tbPaperRotation);
+            this.panel3.Controls.Add(this.cbScissorsFlipping);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Location = new System.Drawing.Point(14, 301);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(508, 180);
+            this.panel3.TabIndex = 25;
+            // 
+            // lblRockCursor
+            // 
+            this.lblRockCursor.AutoSize = true;
+            this.lblRockCursor.Location = new System.Drawing.Point(167, 80);
+            this.lblRockCursor.Name = "lblRockCursor";
+            this.lblRockCursor.Size = new System.Drawing.Size(33, 13);
+            this.lblRockCursor.TabIndex = 29;
+            this.lblRockCursor.Text = "Cross";
+            // 
+            // lblPaperRotation
+            // 
+            this.lblPaperRotation.AutoSize = true;
+            this.lblPaperRotation.Location = new System.Drawing.Point(180, 144);
+            this.lblPaperRotation.Name = "lblPaperRotation";
+            this.lblPaperRotation.Size = new System.Drawing.Size(13, 13);
+            this.lblPaperRotation.TabIndex = 28;
+            this.lblPaperRotation.Text = "0";
+            // 
+            // cmbRockCursor
+            // 
+            this.cmbRockCursor.FormattingEnabled = true;
+            this.cmbRockCursor.Items.AddRange(new object[] {
+            "0 Cross Cursor",
+            "1 MouseDefault Cursor"});
+            this.cmbRockCursor.Location = new System.Drawing.Point(57, 77);
+            this.cmbRockCursor.Name = "cmbRockCursor";
+            this.cmbRockCursor.Size = new System.Drawing.Size(104, 21);
+            this.cmbRockCursor.TabIndex = 27;
+            // 
+            // tbPaperRotation
+            // 
+            this.tbPaperRotation.LargeChange = 180;
+            this.tbPaperRotation.Location = new System.Drawing.Point(57, 130);
+            this.tbPaperRotation.Maximum = 180;
+            this.tbPaperRotation.Name = "tbPaperRotation";
+            this.tbPaperRotation.Size = new System.Drawing.Size(104, 45);
+            this.tbPaperRotation.SmallChange = 180;
+            this.tbPaperRotation.TabIndex = 26;
+            // 
+            // cbScissorsFlipping
+            // 
+            this.cbScissorsFlipping.AutoSize = true;
+            this.cbScissorsFlipping.Location = new System.Drawing.Point(57, 14);
+            this.cbScissorsFlipping.Name = "cbScissorsFlipping";
+            this.cbScissorsFlipping.Size = new System.Drawing.Size(104, 17);
+            this.cbScissorsFlipping.TabIndex = 25;
+            this.cbScissorsFlipping.Text = "Scissors Flipping";
+            this.cbScissorsFlipping.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox2.Image = global::AnimalWorldC.Properties.Resources.rock;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 66);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::AnimalWorldC.Properties.Resources.paper;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 130);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::AnimalWorldC.Properties.Resources.scissors;
+            this.pictureBox3.InitialImage = null;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
             // 
             // GraphicView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 524);
+            this.ClientSize = new System.Drawing.Size(534, 489);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "GraphicView";
             this.Text = "GraphicView";
@@ -369,6 +530,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb0)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPaperRotation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -396,5 +565,18 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblColor;
+        private System.Windows.Forms.Button btnColor;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblRockCursor;
+        private System.Windows.Forms.Label lblPaperRotation;
+        private System.Windows.Forms.ComboBox cmbRockCursor;
+        private System.Windows.Forms.TrackBar tbPaperRotation;
+        private System.Windows.Forms.CheckBox cbScissorsFlipping;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
