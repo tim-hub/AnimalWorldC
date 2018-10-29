@@ -64,6 +64,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ai2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
@@ -90,32 +94,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.BurlyWood;
-            this.panel1.Controls.Add(this.ai2);
-            this.panel1.Controls.Add(this.pb3);
-            this.panel1.Controls.Add(this.ai8);
-            this.panel1.Controls.Add(this.ai7);
-            this.panel1.Controls.Add(this.ai6);
-            this.panel1.Controls.Add(this.ai5);
-            this.panel1.Controls.Add(this.ai4);
-            this.panel1.Controls.Add(this.ai3);
-            this.panel1.Controls.Add(this.ai1);
-            this.panel1.Controls.Add(this.ai0);
-            this.panel1.Controls.Add(this.pb8);
-            this.panel1.Controls.Add(this.pb7);
-            this.panel1.Controls.Add(this.pb6);
-            this.panel1.Controls.Add(this.pb5);
-            this.panel1.Controls.Add(this.pb4);
-            this.panel1.Controls.Add(this.pb2);
-            this.panel1.Controls.Add(this.pb1);
-            this.panel1.Controls.Add(this.pb0);
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Location = new System.Drawing.Point(12, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(510, 235);
+            this.panel1.Size = new System.Drawing.Size(510, 196);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -136,7 +125,7 @@
             this.pb3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb3.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb3.InitialImage = null;
-            this.pb3.Location = new System.Drawing.Point(171, 180);
+            this.pb3.Location = new System.Drawing.Point(171, 3);
             this.pb3.Name = "pb3";
             this.pb3.Size = new System.Drawing.Size(50, 50);
             this.pb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -242,7 +231,7 @@
             this.pb8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb8.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb8.InitialImage = null;
-            this.pb8.Location = new System.Drawing.Point(451, 180);
+            this.pb8.Location = new System.Drawing.Point(451, 3);
             this.pb8.Name = "pb8";
             this.pb8.Size = new System.Drawing.Size(50, 50);
             this.pb8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -254,7 +243,7 @@
             this.pb7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb7.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb7.InitialImage = null;
-            this.pb7.Location = new System.Drawing.Point(395, 180);
+            this.pb7.Location = new System.Drawing.Point(395, 3);
             this.pb7.Name = "pb7";
             this.pb7.Size = new System.Drawing.Size(50, 50);
             this.pb7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -267,7 +256,7 @@
             this.pb6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb6.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb6.InitialImage = null;
-            this.pb6.Location = new System.Drawing.Point(339, 180);
+            this.pb6.Location = new System.Drawing.Point(339, 3);
             this.pb6.Name = "pb6";
             this.pb6.Size = new System.Drawing.Size(50, 50);
             this.pb6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -279,7 +268,7 @@
             this.pb5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb5.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb5.InitialImage = null;
-            this.pb5.Location = new System.Drawing.Point(283, 180);
+            this.pb5.Location = new System.Drawing.Point(283, 3);
             this.pb5.Name = "pb5";
             this.pb5.Size = new System.Drawing.Size(50, 50);
             this.pb5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -291,7 +280,7 @@
             this.pb4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb4.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb4.InitialImage = null;
-            this.pb4.Location = new System.Drawing.Point(227, 180);
+            this.pb4.Location = new System.Drawing.Point(227, 3);
             this.pb4.Name = "pb4";
             this.pb4.Size = new System.Drawing.Size(50, 50);
             this.pb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -303,7 +292,7 @@
             this.pb2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pb2.Image = global::AnimalWorldC.Properties.Resources.paper;
             this.pb2.InitialImage = null;
-            this.pb2.Location = new System.Drawing.Point(115, 180);
+            this.pb2.Location = new System.Drawing.Point(115, 3);
             this.pb2.Name = "pb2";
             this.pb2.Size = new System.Drawing.Size(50, 50);
             this.pb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -315,7 +304,7 @@
             // 
             this.pb1.Image = global::AnimalWorldC.Properties.Resources.rock;
             this.pb1.InitialImage = null;
-            this.pb1.Location = new System.Drawing.Point(59, 180);
+            this.pb1.Location = new System.Drawing.Point(59, 3);
             this.pb1.Name = "pb1";
             this.pb1.Size = new System.Drawing.Size(50, 50);
             this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -327,7 +316,7 @@
             // 
             this.pb0.Image = global::AnimalWorldC.Properties.Resources.scissors;
             this.pb0.InitialImage = null;
-            this.pb0.Location = new System.Drawing.Point(3, 180);
+            this.pb0.Location = new System.Drawing.Point(3, 3);
             this.pb0.Name = "pb0";
             this.pb0.Size = new System.Drawing.Size(50, 50);
             this.pb0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -410,7 +399,7 @@
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Location = new System.Drawing.Point(14, 301);
+            this.panel3.Location = new System.Drawing.Point(13, 276);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(508, 180);
             this.panel3.TabIndex = 25;
@@ -502,11 +491,69 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(193, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 24);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "The Opponent";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel4.Controls.Add(this.ai0);
+            this.panel4.Controls.Add(this.ai2);
+            this.panel4.Controls.Add(this.ai1);
+            this.panel4.Controls.Add(this.ai3);
+            this.panel4.Controls.Add(this.ai8);
+            this.panel4.Controls.Add(this.ai4);
+            this.panel4.Controls.Add(this.ai7);
+            this.panel4.Controls.Add(this.ai5);
+            this.panel4.Controls.Add(this.ai6);
+            this.panel4.Location = new System.Drawing.Point(12, 50);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(510, 59);
+            this.panel4.TabIndex = 26;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel5.Controls.Add(this.pb0);
+            this.panel5.Controls.Add(this.pb3);
+            this.panel5.Controls.Add(this.pb1);
+            this.panel5.Controls.Add(this.pb8);
+            this.panel5.Controls.Add(this.pb2);
+            this.panel5.Controls.Add(this.pb7);
+            this.panel5.Controls.Add(this.pb4);
+            this.panel5.Controls.Add(this.pb6);
+            this.panel5.Controls.Add(this.pb5);
+            this.panel5.Location = new System.Drawing.Point(0, 137);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(510, 59);
+            this.panel5.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(193, 249);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 24);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "The Player\'s";
+            // 
             // GraphicView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 489);
+            this.ClientSize = new System.Drawing.Size(529, 461);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "GraphicView";
@@ -540,7 +587,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -580,5 +630,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label2;
     }
 }
