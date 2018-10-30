@@ -550,5 +550,19 @@ namespace AnimalWorldC
         {
 
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string path = saveFileDialog1.FileName;
+                Components.Serilizer.SerilizeToPath(path, model.PlayerList);
+            }
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
