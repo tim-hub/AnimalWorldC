@@ -92,6 +92,49 @@ namespace AnimalWorldC
             labelScissors.Text = (ScissorsLimit - scissorsCount).ToString();
             labelRock.Text = (RockLimit - rockCount).ToString();
             labelPaper.Text = (PaperLimit - paperCount).ToString();
+
+            if (scissorsCount+rockCount+paperCount == 9)
+            {
+                btnCreate.Enabled = false;
+            }
+            else
+            {
+                btnCreate.Enabled = true;
+            }
+
+
+            if (scissorsCount <= 3 && ScissorsLimit- scissorsCount > 0)
+            {
+                rbScissors.Enabled = true;
+                cbScissorsFlipping.Enabled = true;
+            }
+            else
+            {
+                rbScissors.Enabled = false;
+                cbScissorsFlipping.Enabled = false;
+            }
+
+            if (rockCount <=3 && RockLimit- rockCount > 0)
+            {
+                rbRock.Enabled = true;
+                cmbRockCursor.Enabled = true;
+            }
+            else
+            {
+                rbRock.Enabled = false;
+                cmbRockCursor.Enabled = false;
+            }
+
+            if (paperCount<=3 && PaperLimit -  paperCount > 0)
+            {
+                rbPaper.Enabled = true;
+                tbPaperRotation.Enabled = true;
+            }
+            else
+            {
+                rbPaper.Enabled = false;
+                tbPaperRotation.Enabled = false;
+            }
         }
 
         private void DisableScissorsProperty()
@@ -186,7 +229,7 @@ namespace AnimalWorldC
             int j = 0;
             if (Int32.TryParse( elementsUIDict[rb].Text, out j))
             {
-                if (j > 0)
+                if (j > 0 && j<=3)
                 {
                     j = j - 1;
 
@@ -204,6 +247,12 @@ namespace AnimalWorldC
                         elementsUIDict[rb].Enabled = false;
                         rb.Enabled = false;
                     }
+                    else
+                    {
+                        elementsUIDict[rb].Enabled = true;
+                        rb.Enabled = true;
+                        rb.Enabled = true;
+                    }
 
                     // send the data change to the model,
                     // the model will call update views through controller,
@@ -219,7 +268,7 @@ namespace AnimalWorldC
         private void CreateOne()
         {
            
-            if (rbPaper.Checked )
+            if (rbPaper.Checked && paperCount <3 )
             {
                 Paper paper;
                 paper = new Paper();
@@ -229,7 +278,7 @@ namespace AnimalWorldC
                 CreatingValidation(rbPaper, paper);
 
             }
-            if (rbRock.Checked)
+            if (rbRock.Checked && rockCount <3)
             {
                 Rock rock;
                 rock = new Rock();
@@ -240,7 +289,7 @@ namespace AnimalWorldC
                 CreatingValidation(rbRock, rock);
 
             }
-            if (rbScissors.Checked)
+            if (rbScissors.Checked && scissorsCount<3)
             {
                 Scissors scissors;
                 scissors = new Scissors();
@@ -481,8 +530,21 @@ namespace AnimalWorldC
             rbScissors.Enabled = true;
             rbRock.Enabled = true;
             rbPaper.Enabled = true;
+
             btnUpdate.Enabled = false;
-            btnCreate.Enabled = true;
+
+            if (scissorsCount + rockCount + paperCount == 9)
+            {
+                btnCreate.Enabled = false;
+            }
+            else
+            {
+                btnCreate.Enabled = true;
+            }
+
+
+            
+
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
