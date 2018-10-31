@@ -8,12 +8,22 @@ using System.Drawing;
 
 namespace AnimalWorldC
 {
+    public class ColorHolder
+    {
+        public System.Drawing.Color Value { get; set; }
+
+        public ColorHolder(int a, int r, int g, int b)
+        {
+            Value = Color.FromArgb(a, r, g, b);
+        }
+    }
+
     public abstract class Element
     {
         protected int id;
 
         protected string name ;
-        private Color color;
+        public ColorHolder theColorHolder;
         
         public int Id
         {
@@ -24,15 +34,36 @@ namespace AnimalWorldC
             get { return name; }
         }
 
-        public Color GetColor()
+        public Color GetTheColor()
         {
-            return this.color;
+
+            return Color.FromArgb(
+                    theColorHolder.Value.A,
+                    theColorHolder.Value.R,
+                    theColorHolder.Value.G,
+                    theColorHolder.Value.B
+                    );
+            
+        }
+
+
+        public ColorHolder TheColorHolder()
+        {
+            
+            return this.theColorHolder;
+        }
+
+        public void SetColor(ColorHolder c)
+        {
+            
+            this.theColorHolder = c;
         }
 
         public void SetColor(Color c)
         {
-            this.color = c;
+            this.theColorHolder = new ColorHolder(c.A, c.R, c.G, c.B);
         }
+
         public override string ToString()
         {
             return name;

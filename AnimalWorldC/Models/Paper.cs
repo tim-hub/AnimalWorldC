@@ -84,12 +84,12 @@ namespace AnimalWorldC
         {
             if (this.rotatingDegrees == 180)
             {
-                return name + "("+id+")"+ ", Color: " + this.GetColor() + ", Rotating 180 degrees";
+                return name + "("+id+")"+ ", Color: " + this.GetTheColor() + ", Rotating 180 degrees";
 
             }
             else
             {
-                return name + "(" + id + ")" + ", Color: " + this.GetColor() + ", Rotating 0 degrees";
+                return name + "(" + id + ")" + ", Color: " + this.GetTheColor() + ", Rotating 0 degrees";
             }
             
         }

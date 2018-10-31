@@ -47,9 +47,9 @@ namespace AnimalWorldC
                 {
                     pbs[i].Image = model.PlayerList[i].GetImage();
 
-                    if (model.PlayerList[i].GetColor() != null)
+                    if (model.PlayerList[i].GetTheColor() != null)
                     {
-                        pbs[i].BackColor = model.PlayerList[i].GetColor();
+                        pbs[i].BackColor = model.PlayerList[i].GetTheColor();
 
                         if (model.PlayerList[i].GetType() == typeof(Rock))
                         {
@@ -75,9 +75,9 @@ namespace AnimalWorldC
                     if (model.PlayerList[i].Id == j)
                     {
                         pbs[i].Image = model.PlayerList[i].GetImage();
-                        if (model.PlayerList[i].GetColor() != null)
+                        if (model.PlayerList[i].GetTheColor() != null)
                         {
-                            pbs[i].BackColor = model.PlayerList[i].GetColor();
+                            pbs[i].BackColor = model.PlayerList[i].GetTheColor();
                             if (model.PlayerList[i].GetType() == typeof(Rock))
                             {
                                 Rock r = (Rock)model.PlayerList[i];

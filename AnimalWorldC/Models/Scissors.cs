@@ -87,12 +87,12 @@ namespace AnimalWorldC
         {
             if (this.flipping)
             {
-                return name + "(" + id + ")" + ", Color: " + this.GetColor() + ", Flipping";
+                return name + "(" + id + ")" + ", Color: " + this.GetTheColor() + ", Flipping";
 
             }
             else
             {
-                return name + "(" + id + ")" + ", Color: " + this.GetColor() + ", Not Flipping";
+                return name + "(" + id + ")" + ", Color: " + this.GetTheColor() + ", Not Flipping";
             }
 
         }

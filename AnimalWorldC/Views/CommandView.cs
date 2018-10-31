@@ -564,5 +564,15 @@ namespace AnimalWorldC
         {
 
         }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string path = openFileDialog1.FileName;
+
+                model.UpdatePlayerList(Components.Serilizer.DeSerilze(path));
+            }
+        }
     }
 }

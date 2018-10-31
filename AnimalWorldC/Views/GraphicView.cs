@@ -99,9 +99,9 @@ namespace AnimalWorldC
                 {
                     pbs[i].Image = model.PlayerList[i].GetImage();
 
-                    if (model.PlayerList[i].GetColor() != null)
+                    if (model.PlayerList[i].GetTheColor() != null)
                     {
-                        pbs[i].BackColor = model.PlayerList[i].GetColor();
+                        pbs[i].BackColor = model.PlayerList[i].GetTheColor();
 
                         if (model.PlayerList[i].GetType() == typeof(Rock) )
                         {
@@ -381,6 +381,11 @@ namespace AnimalWorldC
         {
             pbSelected = 8;
             ShowRightClickMenu(pbSelected, e);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

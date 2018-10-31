@@ -42,6 +42,16 @@ namespace AnimalWorldC
             }
         }
 
+        public void UpdatePlayerList(List<Element> elements)
+        {
+            ClearList();
+            foreach(Element element in elements)
+            {
+                this.playerList.Add(element);
+            }
+            UpdateViews();
+        }
+
         public List<Element> getAIList()
         {
             return null;
@@ -57,6 +67,11 @@ namespace AnimalWorldC
         {
             this.playerList[i] = element;
             UpdateViews();
+        }
+
+        public void ClearList()
+        {
+            this.playerList.Clear();
         }
 
         public void RemoveOne(Element element)

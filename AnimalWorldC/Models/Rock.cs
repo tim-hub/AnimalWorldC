@@ -69,12 +69,12 @@ namespace AnimalWorldC
         {
             if (this.cursorName == "Default")
             {
-                return name + "(" + id + ")" + ", Color: " + this.GetColor() + ", using Default Cursor";
+                return name + "(" + id + ")" + ", Color: " + this.GetTheColor() + ", using Default Cursor";
 
             }
             else
             {
-                return name + "(" + id + ")" + ", Color: " + this.GetColor() + ", Using Special Cross Cursor";
+                return name + "(" + id + ")" + ", Color: " + this.GetTheColor() + ", Using Special Cross Cursor";
             }
 
         }
